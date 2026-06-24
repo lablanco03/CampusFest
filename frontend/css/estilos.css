@@ -20,6 +20,12 @@
     --font-secondary: 'Montserrat', sans-serif;
 }
 
+/* Reset basico: evita que padding/border sumen ancho extra
+   a elementos con width:100% (ej. botones, inputs) */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 
 body {
     font-family: var(--font-primary);
@@ -452,6 +458,222 @@ body {
     color: #5b6b73;
     font-size: 1.05rem;
     display: none;
+}
+
+
+/* ============================================================
+   PAGINA DE DETALLE DE ACTIVIDAD (detalle_actividad.html)
+   ============================================================ */
+
+.banner_detalle {
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+}
+
+.banner_detalle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner_overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(26, 45, 61, 0.85) 0%, rgba(26, 45, 61, 0.15) 60%, transparent 100%);
+    display: flex;
+    align-items: flex-end;
+    padding: 24px 0;
+}
+
+.banner_overlay .contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.enlace_volver {
+    color: var(--color-support3);
+    font-family: var(--font-secondary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    width: fit-content;
+}
+
+.enlace_volver:hover {
+    text-decoration: underline;
+}
+
+.banner_overlay .card_badge_categoria {
+    position: static;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.banner_overlay h1 {
+    color: var(--color-support3);
+    font-size: 2rem;
+    margin: 0;
+}
+
+/* Cuerpo de la pagina: 2 columnas */
+.cuerpo_detalle {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto 60px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.bloque_info {
+    background-color: var(--color-support3);
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(11, 79, 108, 0.08);
+}
+
+.bloque_info h2 {
+    font-family: var(--font-primary);
+    font-size: 1.2rem;
+    color: var(--color-dark);
+    margin: 0 0 16px 0;
+}
+
+.grid_info_general {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.dato_info {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.dato_info .etiqueta_dato {
+    display: block;
+    font-size: 0.78rem;
+    color: #5b6b73;
+    margin-bottom: 2px;
+}
+
+.dato_info .valor_dato {
+    font-weight: 700;
+    color: var(--color-dark);
+    font-size: 0.95rem;
+}
+
+.bloque_info p.texto_descripcion {
+    color: #41525c;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Columna lateral: estado de cupo + inscripcion */
+.panel_lateral {
+    background-color: var(--color-support3);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 2px 10px rgba(11, 79, 108, 0.08);
+    position: sticky;
+    top: 20px;
+}
+
+.panel_lateral h2 {
+    font-family: var(--font-primary);
+    font-size: 1.1rem;
+    margin: 0 0 14px 0;
+    color: var(--color-dark);
+}
+
+.fila_inscritos {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: var(--color-dark);
+    margin-bottom: 8px;
+}
+
+.fila_inscritos strong {
+    color: var(--color-primary);
+}
+
+.cupos_disponibles_texto {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: #5b6b73;
+    margin-bottom: 18px;
+}
+
+.btn_inscribirme {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: var(--color-secondary);
+    color: var(--color-dark);
+    border: none;
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.btn_inscribirme:hover {
+    background-color: #e8924a;
+}
+
+.btn_inscribirme.deshabilitado {
+    background-color: #9aa5ab;
+    color: var(--color-support3);
+    cursor: not-allowed;
+    opacity: 0.85;
+}
+
+.nota_confirmacion {
+    text-align: center;
+    font-size: 0.78rem;
+    color: #8b99a1;
+    margin-top: 10px;
+}
+
+/* ============================================================
+   MEDIA QUERY: detalle_actividad.html en pantallas pequeñas
+   (RF-RD-02 / RF-RD-03 - media query propia)
+   ============================================================ */
+@media (max-width: 768px) {
+    .cuerpo_detalle {
+        grid-template-columns: 1fr;
+    }
+
+    .panel_lateral {
+        position: static;
+    }
+
+    .grid_info_general {
+        grid-template-columns: 1fr;
+    }
+
+    .banner_detalle {
+        height: 240px;
+    }
+
+    .banner_overlay h1 {
+        font-size: 1.5rem;
+    }
 }
 
 
