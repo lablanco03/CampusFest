@@ -32,11 +32,164 @@
 
         </div>
     </header>
-    
+    <!-- TITULO DE LA PAGINA -->
+    <section class="titulo_pagina">
+        <div class="contenedor">
+            <h1>Actividades</h1>
+            <p>Explora todas las actividades del festival</p>
+        </div>
+    </section>
 
+    <!-- BARRA DE BUSQUEDA Y FILTROS -->
+    <section class="barra_filtros">
+        <div class="buscador_actividades">
+            <input
+                type="text"
+                id="txtBuscarActividad"
+                placeholder="Buscar actividad o lugar...">
+        </div>
 
+        <div class="filtros_categoria" id="filtrosCategoria">
+            <button class="filtro_btn activo" data-categoria="todas">Todas</button>
+            <button class="filtro_btn" data-categoria="cultural">Cultural</button>
+            <button class="filtro_btn" data-categoria="deportivo">Deportivo</button>
+            <button class="filtro_btn" data-categoria="tecnologico">Tecnológico</button>
+            <button class="filtro_btn" data-categoria="artistico">Artístico</button>
+            <button class="filtro_btn" data-categoria="gastronomico">Gastronómico</button>
+            <button class="filtro_btn" data-categoria="recreativo">Recreativo</button>
+        </div>
+
+        <p class="contador_resultados" id="contadorResultados">6 actividades encontradas</p>
+    </section>
+
+    <!-- GRID DE ACTIVIDADES -->
+    <section>
+        <div class="grid_actividades" id="gridActividades">
+
+            <!-- Hackathon Universitario -->
+            <article class="card_actividad" data-categoria="tecnologico" data-nombre="hackathon universitario" data-lugar="auditorio principal">
+                <div class="card_imagen">
+                    <img src="img/actividades/hackathon.jpg" alt="Hackathon Universitario">
+                    <span class="card_badge_categoria tecnologico">Tecnológico</span>
+                </div>
+                <div class="card_cuerpo">
+                    <h3>Hackathon Universitario</h3>
+                    <p class="card_meta">📅 Sáb 14 jun 2026</p>
+                    <p class="card_meta">🕒 08:00 - 20:00</p>
+                    <p class="card_meta">📍 Auditorio Principal</p>
+                    <div class="card_barra_cupo">
+                        <div class="card_barra_cupo_relleno" style="width:82%; background-color: var(--color-support1);"></div>
+                    </div>
+                    <p class="card_texto_cupo">98/120 cupos</p>
+                    <a href="detalle_actividad.html" class="card_btn_detalle">Ver detalle →</a>
+                </div>
+            </article>
+
+            <!-- Torneo de Futbol -->
+            <article class="card_actividad" data-categoria="deportivo" data-nombre="torneo de futbol interfacultades" data-lugar="canchas deportivas norte">
+                <div class="card_imagen">
+                    <img src="img/actividades/futbol.jpg" alt="Torneo de Futbol Interfacultades">
+                    <span class="card_badge_categoria deportivo">Deportivo</span>
+                    <span class="card_badge_estado lleno">Lleno</span>
+                </div>
+                <div class="card_cuerpo">
+                    <h3>Torneo de Fútbol Interfacultades</h3>
+                    <p class="card_meta">📅 Dom 15 jun 2026</p>
+                    <p class="card_meta">🕒 09:00 - 18:00</p>
+                    <p class="card_meta">📍 Canchas Deportivas Norte</p>
+                    <div class="card_barra_cupo">
+                        <div class="card_barra_cupo_relleno" style="width:100%; background-color: var(--color-recreative);"></div>
+                    </div>
+                    <p class="card_texto_cupo">200/200 cupos</p>
+                    <span class="card_btn_deshabilitado">Sin cupos</span>
+                </div>
+            </article>
+
+            <!-- Exposicion de Arte -->
+            <article class="card_actividad" data-categoria="artistico" data-nombre="exposicion de arte contemporaneo" data-lugar="galeria central">
+                <div class="card_imagen">
+                    <img src="img/actividades/arte.jpg" alt="Exposición de Arte Contemporáneo">
+                    <span class="card_badge_categoria artistico">Artístico</span>
+                </div>
+                <div class="card_cuerpo">
+                    <h3>Exposición de Arte Contemporáneo</h3>
+                    <p class="card_meta">📅 Sáb 14 jun 2026</p>
+                    <p class="card_meta">🕒 10:00 - 17:00</p>
+                    <p class="card_meta">📍 Galería Central</p>
+                    <div class="card_barra_cupo">
+                        <div class="card_barra_cupo_relleno" style="width:48%; background-color: var(--color-artistic);"></div>
+                    </div>
+                    <p class="card_texto_cupo">145/300 cupos</p>
+                    <a href="detalle_actividad.html" class="card_btn_detalle">Ver detalle →</a>
+                </div>
+            </article>
+
+            <!-- Festival Gastronomico -->
+            <article class="card_actividad" data-categoria="gastronomico" data-nombre="festival gastronomico" data-lugar="plaza central">
+                <div class="card_imagen">
+                    <img src="img/actividades/gastronomico.jpg" alt="Festival Gastronómico">
+                    <span class="card_badge_categoria gastronomico">Gastronómico</span>
+                </div>
+                <div class="card_cuerpo">
+                    <h3>Festival Gastronómico</h3>
+                    <p class="card_meta">📅 Dom 15 jun 2026</p>
+                    <p class="card_meta">🕒 11:00 - 20:00</p>
+                    <p class="card_meta">📍 Plaza Central</p>
+                    <div class="card_barra_cupo">
+                        <div class="card_barra_cupo_relleno" style="width:62%; background-color: var(--color-secondary);"></div>
+                    </div>
+                    <p class="card_texto_cupo">312/500 cupos</p>
+                    <a href="detalle_actividad.html" class="card_btn_detalle">Ver detalle →</a>
+                </div>
+            </article>
+
+            <!-- Concierto de Bandas -->
+            <article class="card_actividad" data-categoria="cultural" data-nombre="concierto de bandas universitarias" data-lugar="auditorio principal">
+                <div class="card_imagen">
+                    <img src="img/actividades/concierto.jpg" alt="Concierto de Bandas Universitarias">
+                    <span class="card_badge_categoria cultural">Cultural</span>
+                </div>
+                <div class="card_cuerpo">
+                    <h3>Concierto de Bandas Universitarias</h3>
+                    <p class="card_meta">📅 Dom 15 jun 2026</p>
+                    <p class="card_meta">🕒 19:00 - 23:00</p>
+                    <p class="card_meta">📍 Auditorio Principal</p>
+                    <div class="card_barra_cupo">
+                        <div class="card_barra_cupo_relleno" style="width:81%; background-color: var(--color-primary);"></div>
+                    </div>
+                    <p class="card_texto_cupo">650/800 cupos</p>
+                    <a href="detalle_actividad.html" class="card_btn_detalle">Ver detalle →</a>
+                </div>
+            </article>
+
+            <!-- Taller de Robotica -->
+            <article class="card_actividad" data-categoria="tecnologico" data-nombre="taller de robotica e ia" data-lugar="laboratorio ingenieria b5">
+                <div class="card_imagen">
+                    <img src="img/actividades/robotica.jpg" alt="Taller de Robótica e IA">
+                    <span class="card_badge_categoria tecnologico">Tecnológico</span>
+                </div>
+                <div class="card_cuerpo">
+                    <h3>Taller de Robótica e IA</h3>
+                    <p class="card_meta">📅 Sáb 14 jun 2026</p>
+                    <p class="card_meta">🕒 14:00 - 17:00</p>
+                    <p class="card_meta">📍 Laboratorio Ingeniería B5</p>
+                    <div class="card_barra_cupo">
+                        <div class="card_barra_cupo_relleno" style="width:95%; background-color: var(--color-support1);"></div>
+                    </div>
+                    <p class="card_texto_cupo">38/40 cupos</p>
+                    <a href="detalle_actividad.html" class="card_btn_detalle">Ver detalle →</a>
+                </div>
+            </article>
+
+        </div>
+
+        <p class="sin_resultados" id="sinResultados">No se encontraron actividades con esos filtros.</p>
+    </section>
     <!-- ACTIVAR ICONS -->
     <script>lucide.createIcons();</script>
+
+    <!-- LOGICA DE FILTRADO Y BUSQUEDA -->
+    <script src="js/actividades.js"></script>
 
 </body>
 </html>
