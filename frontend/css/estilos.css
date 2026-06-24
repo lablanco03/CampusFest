@@ -676,5 +676,37 @@ body {
     }
 }
 
+/* ============================================================
+   MEDIA QUERY: actividades.html en pantallas medianas/pequeñas
+   (RF-RD-01 / RF-RD-02 / RF-RD-03 - media query propia)
+   ============================================================ */
+
+/* Tablet: 3 columnas -> 2 columnas */
+@media (max-width: 1024px) {
+    .grid_actividades {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Celular: 2 columnas -> 1 columna, filtros en bloque */
+@media (max-width: 640px) {
+    .titulo_pagina h1 {
+        font-size: 1.9rem;
+    }
+
+    .filtros_categoria {
+        gap: 8px;
+    }
+
+    .filtro_btn {
+        font-size: 0.82rem;
+        padding: 8px 14px;
+    }
+
+    .grid_actividades {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 
