@@ -708,5 +708,122 @@ body {
     }
 }
 
+/* ============================================================
+   PAGINA DE INSCRIPCION
+============================================================ */
 
+.seccion_formulario{
+    padding: 50px 0;
+}
 
+.contenedor_formulario{
+    width: 90%;
+    max-width: 700px;
+    margin: auto;
+}
+
+.formulario_inscripcion{
+    background-color: var(--color-support3);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(11,79,108,0.10);
+}
+
+.grupo_formulario{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.grupo_formulario label{
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: var(--color-dark);
+}
+
+.grupo_formulario input,
+.grupo_formulario select,
+.grupo_formulario textarea{
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid var(--color-muted);
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+}
+
+.grupo_formulario input:focus,
+.grupo_formulario select:focus,
+.grupo_formulario textarea:focus{
+    outline: 2px solid var(--color-support1);
+}
+
+.grupo_checkbox{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.btn_formulario{
+    width: 100%;
+    border: none;
+    background-color: var(--color-secondary);
+    color: var(--color-dark);
+    font-weight: 800;
+    padding: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn_formulario:hover{
+    transform: scale(1.02);
+}
+
+.mensaje_formulario{
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+/* ============================================================
+   PAGINA DE AGENDA
+============================================================ */
+
+.agenda_eventos{
+    padding: 50px 0;
+}
+
+.contenedor_agenda{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.card_agenda{
+    background-color: white;
+    border-left: 8px solid var(--color-primary);
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+
+.card_agenda h3{
+    margin-top: 0;
+    color: var(--color-primary);
+}
+
+.estado_disponible{
+    color: var(--color-support2);
+    font-weight: bold;
+}
+
+.estado_lleno{
+    color: var(--color-secondary);
+    font-weight: bold;
+}
+
+.estado_cancelado{
+    color: var(--color-recreative);
+    font-weight: bold;
+}
