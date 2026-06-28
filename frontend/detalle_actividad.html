@@ -35,15 +35,15 @@
 
     <!-- BANNER CON IMAGEN DE LA ACTIVIDAD -->
     <section class="banner_detalle">
-        <img src="img/actividades/hackathon.jpg" alt="Hackathon Universitario">
+        <img id="imagenBanner" src="img/actividades/hackathon.jpg" alt="Hackathon Universitario">
         <div class="banner_overlay">
             <div class="contenedor">
                 <a href="actividades.html" class="enlace_volver">
                     <i data-lucide="arrow-left" width="16" height="16"></i>
                     Volver
                 </a>
-                <span class="card_badge_categoria tecnologico">Tecnológico</span>
-                <h1>Hackathon Universitario</h1>
+                <span id="badgeCategoria" class="card_badge_categoria tecnologico">Tecnológico</span>
+                <h1 id="tituloActividad">Hackathon Universitario</h1>
             </div>
         </div>
     </section>
@@ -62,28 +62,28 @@
                             <i data-lucide="calendar" width="18" height="18"></i>
                             <div>
                                 <span class="etiqueta_dato">Fecha</span>
-                                <span class="valor_dato">Sáb 14 jun 2026</span>
+                                <span id="valorFecha" class="valor_dato">Sáb 14 jun 2026</span>
                             </div>
                         </div>
                         <div class="dato_info">
                             <i data-lucide="clock" width="18" height="18"></i>
                             <div>
                                 <span class="etiqueta_dato">Horario</span>
-                                <span class="valor_dato">08:00 - 20:00</span>
+                                <span id="valorHorario" class="valor_dato">08:00 - 20:00</span>
                             </div>
                         </div>
                         <div class="dato_info">
                             <i data-lucide="map-pin" width="18" height="18"></i>
                             <div>
                                 <span class="etiqueta_dato">Lugar</span>
-                                <span class="valor_dato">Auditorio Principal</span>
+                                <span id="valorLugar" class="valor_dato">Auditorio Principal</span>
                             </div>
                         </div>
                         <div class="dato_info">
                             <i data-lucide="users" width="18" height="18"></i>
                             <div>
                                 <span class="etiqueta_dato">Cupo máximo</span>
-                                <span class="valor_dato">120 personas</span>
+                                <span id="valorCupoMaximo" class="valor_dato">120 personas</span>
                             </div>
                         </div>
                     </div>
@@ -91,7 +91,7 @@
 
                 <div class="bloque_info">
                     <h2>Descripción</h2>
-                    <p class="texto_descripcion">
+                    <p id="textoDescripcion" class="texto_descripcion">
                         Compite en equipos de 3 a 5 personas para desarrollar soluciones
                         innovadoras a retos reales del campus. 12 horas continuas de
                         código, creatividad, diseño y colaboración. Habrá mentores
@@ -103,7 +103,7 @@
 
                 <div class="bloque_info">
                     <h2>Requisitos de participación</h2>
-                    <p class="texto_descripcion">
+                    <p id="textoRequisitos" class="texto_descripcion">
                         Laptop propia, conocimientos básicos de programación y equipo
                         conformado de 3 a 5 personas. Registro previo obligatorio antes
                         del 10 de junio. Cada integrante del equipo debe completar el
@@ -119,19 +119,19 @@
 
                 <div class="fila_inscritos">
                     <span>Inscritos</span>
-                    <strong>98/120</strong>
+                    <strong id="valorInscritos">98/120</strong>
                 </div>
 
                 <div class="card_barra_cupo">
-                    <div class="card_barra_cupo_relleno" style="width:82%; background-color: var(--color-support1);"></div>
+                    <div id="barraCupoRelleno" class="card_barra_cupo_relleno" style="width:82%; background-color: var(--color-support1);"></div>
                 </div>
 
                 <p class="cupos_disponibles_texto">
                     <i data-lucide="check-circle-2" width="15" height="15"></i>
-                    22 cupos disponibles
+                    <span id="textoCuposDisponibles">22 cupos disponibles</span>
                 </p>
 
-                <a href="inscripcion.html" class="btn_inscribirme">Inscribirme →</a>
+                <a href="inscripcion.html" id="btnInscribirme" class="btn_inscribirme">Inscribirme →</a>
 
                 <p class="nota_confirmacion">Recibirás confirmación por correo electrónico</p>
             </aside>
@@ -141,6 +141,9 @@
 
     <!-- ACTIVAR ICONS -->
     <script>lucide.createIcons();</script>
+
+    <!-- LOGICA DE DETALLE DINAMICO -->
+    <script src="js/detalle_actividad.js"></script>
 
 </body>
 </html>
