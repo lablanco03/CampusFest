@@ -12,6 +12,7 @@ const datosActividades = {
         categoria: 'tecnologico',
         categoriaTexto: 'Tecnológico',
         imagen: 'img/actividades/hackathon.jpg',
+        posicionImagen: 'center 35%',
         fecha: 'Sáb 14 jun 2026',
         horario: '08:00 - 20:00',
         lugar: 'Auditorio Principal',
@@ -32,6 +33,7 @@ const datosActividades = {
         categoria: 'deportivo',
         categoriaTexto: 'Deportivo',
         imagen: 'img/actividades/futbol.jpg',
+        posicionImagen: 'center 50%',
         fecha: 'Dom 15 jun 2026',
         horario: '09:00 - 18:00',
         lugar: 'Canchas Deportivas Norte',
@@ -49,6 +51,7 @@ const datosActividades = {
         categoria: 'artistico',
         categoriaTexto: 'Artístico',
         imagen: 'img/actividades/arte.jpg',
+        posicionImagen: 'center 65%',
         fecha: 'Sáb 14 jun 2026',
         horario: '10:00 - 17:00',
         lugar: 'Galería Central',
@@ -66,6 +69,7 @@ const datosActividades = {
         categoria: 'gastronomico',
         categoriaTexto: 'Gastronómico',
         imagen: 'img/actividades/gastronomico.jpg',
+        posicionImagen: 'center 50%',
         fecha: 'Dom 15 jun 2026',
         horario: '11:00 - 20:00',
         lugar: 'Plaza Central',
@@ -82,6 +86,7 @@ const datosActividades = {
         categoria: 'cultural',
         categoriaTexto: 'Cultural',
         imagen: 'img/actividades/concierto.jpg',
+        posicionImagen: 'center 60%',
         fecha: 'Dom 15 jun 2026',
         horario: '19:00 - 23:00',
         lugar: 'Auditorio Principal',
@@ -98,6 +103,7 @@ const datosActividades = {
         categoria: 'tecnologico',
         categoriaTexto: 'Tecnológico',
         imagen: 'img/actividades/robotica.jpg',
+        posicionImagen: 'center 30%',
         fecha: 'Sáb 14 jun 2026',
         horario: '14:00 - 17:00',
         lugar: 'Laboratorio Ingeniería B5',
@@ -132,6 +138,8 @@ function mostrarDetalleActividad() {
     // Banner
     document.getElementById('imagenBanner').src = actividad.imagen;
     document.getElementById('imagenBanner').alt = actividad.nombre;
+    document.getElementById('imagenBanner').style.objectPosition =
+        actividad.posicionImagen || 'center 50%';
     document.getElementById('badgeCategoria').textContent = actividad.categoriaTexto;
     document.getElementById('badgeCategoria').className =
         'card_badge_categoria ' + actividad.categoria;
