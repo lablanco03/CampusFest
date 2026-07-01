@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+	--color-primary: #0B4F6C;
+	--color-secondary: #F4A261;
+	--color-bg: #F6F1D1;
+	--color-support1: #1F7A8C;
+	--color-support2: #2E8B57;
+	--color-support3: #ffffff;
+	--color-support4: #ffffff14;
+	--color-dark: #1A2D3D;
+	--color-muted: #EBE5CC;
+	--color-artistic: #7C3AED;
+	--color-recreative: #DC2626;
+
+	--font-primary: 'Nunito', sans-serif;
+	--font-secondary: 'Montserrat', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: var(--font-primary);
+	background-color: var(--color-bg);
+	margin: 0;
+}
+
+/* ---------- ALINEACIÓN GLOBAL DE ICONOS LUCIDE ---------- */
+i[data-lucide] {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+/* ---------- HEADER ---------- */
+.header_principal {
+	background-color: var(--color-primary);
+	padding: 15px 0;
+	border-bottom: 3px solid var(--color-secondary);
+}
+
+.contenedor_header {
+	width: 90%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	height: 80px;
+	width: auto;
+	display: block;
+	transform: scale(1.25);
+	transition: 0.25s ease;
+}
+
+.logo:hover {
+	transform: scale(1.35);
+}
+
+.menu_header {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	margin-right: 80px;
+}
+
+.menu_header a {
+	text-decoration: none;
+	color: var(--color-support3);
+	font-size: 1.1rem;
+	font-weight: 700;
+	padding: 10px 18px;
+	border-radius: 12px;
+	transition: 0.25s ease;
+}
+
+.menu_header a.activo {
+	background-color: var(--color-support1);
+	padding: 14px 22px;
+}
+
+.menu_header a:hover {
+	background-color: var(--color-support1);
+	transform: scale(1.10);
+}
+
+#admin_header {
+	background-color: var(--color-secondary);
+	color: var(--color-dark);
+	font-weight: 800;
+	padding: 10px 18px;
+	border-radius: 12px;
+}
+
+#admin_header:hover {
+	transform: scale(1.10);
+}
+
+/* ---------- BANNER DETALLE ---------- */
+.banner_detalle {
+	position: relative;
+	height: 320px;
+	overflow: hidden;
+}
+
+.banner_detalle img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.banner_overlay {
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(to top, rgba(26, 45, 61, 0.85) 0%, rgba(26, 45, 61, 0.15) 60%, transparent 100%);
+	display: flex;
+	align-items: flex-end;
+	padding: 24px 0;
+}
+
+.banner_overlay .contenedor {
+	width: 90%;
+	max-width: 1100px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.enlace_volver {
+	color: var(--color-support3);
+	font-family: var(--font-secondary);
+	font-size: 1.05rem;
+	font-weight: 600;
+	margin-bottom: 12px;
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	width: fit-content;
+	text-decoration: none;
+	transition: text-decoration 0.2s ease;
+}
+
+.enlace_volver:hover {
+	text-decoration: underline;
+}
+
+/* Insignia de categoría (base) */
+.card_badge_categoria {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	font-family: var(--font-secondary);
+	font-weight: 700;
+	font-size: 0.7rem;
+	color: var(--color-support3);
+	padding: 5px 12px;
+	border-radius: 20px;
+}
+
+/* Insignia dentro del banner (más grande y sin posicionamiento absoluto) */
+.banner_overlay .card_badge_categoria {
+	position: static;
+	display: inline-block;
+	margin-bottom: 10px;
+	font-size: 0.85rem;
+	padding: 6px 16px;
+}
+
+/* Título de la actividad en el banner */
+.banner_overlay h1 {
+	color: var(--color-support3);
+	font-size: 2rem;
+	margin: 0;
+}
+
+/* Colores por categoría */
+.card_badge_categoria.tecnologico  { background-color: var(--color-support1); }
+.card_badge_categoria.deportivo    { background-color: var(--color-support2); }
+.card_badge_categoria.artistico    { background-color: var(--color-artistic); }
+.card_badge_categoria.cultural     { background-color: var(--color-primary); }
+.card_badge_categoria.gastronomico { background-color: var(--color-secondary); }
+.card_badge_categoria.recreativo   { background-color: var(--color-recreative); }
+
+/* Badge de estado (lleno, disponible…) */
+.card_badge_estado {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-family: var(--font-secondary);
+	font-weight: 700;
+	font-size: 0.7rem;
+	color: var(--color-support3);
+	padding: 5px 12px;
+	border-radius: 20px;
+}
+
+.card_badge_estado.lleno      { background-color: var(--color-recreative); }
+.card_badge_estado.disponible { background-color: var(--color-support2); }
+.card_badge_estado.cancelado  { background-color: #6b7280; }
+
+/* ---------- CUERPO DE LA PÁGINA: 2 COLUMNAS ---------- */
+.cuerpo_detalle {
+	width: 90%;
+	max-width: 1100px;
+	margin: 40px auto 60px;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 30px;
+	align-items: start;
+}
+
+.bloque_info {
+	background-color: var(--color-support3);
+	border-radius: 16px;
+	padding: 24px 28px;
+	margin-bottom: 20px;
+	box-shadow: 0 2px 10px rgba(11, 79, 108, 0.08);
+}
+
+.bloque_info h2 {
+	font-family: var(--font-primary);
+	font-size: 1.2rem;
+	color: var(--color-dark);
+	margin: 0 0 16px 0;
+}
+
+.grid_info_general {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 16px;
+}
+
+.dato_info {
+	display: flex;
+	align-items: flex-start;
+	gap: 10px;
+}
+
+.dato_info .etiqueta_dato {
+	display: block;
+	font-size: 0.78rem;
+	color: #5b6b73;
+	margin-bottom: 2px;
+}
+
+.dato_info .valor_dato {
+	font-weight: 700;
+	color: var(--color-dark);
+	font-size: 0.95rem;
+}
+
+.bloque_info p.texto_descripcion {
+	color: #41525c;
+	line-height: 1.7;
+	margin: 0;
+}
+
+/* ---------- COLUMNA LATERAL: ESTADO DE CUPO + INSCRIPCIÓN ---------- */
+.panel_lateral {
+	background-color: var(--color-support3);
+	border-radius: 16px;
+	padding: 24px;
+	box-shadow: 0 2px 10px rgba(11, 79, 108, 0.08);
+	position: sticky;
+	top: 20px;
+}
+
+.panel_lateral h2 {
+	font-family: var(--font-primary);
+	font-size: 1.1rem;
+	margin: 0 0 14px 0;
+	color: var(--color-dark);
+}
+
+.fila_inscritos {
+	display: flex;
+	justify-content: space-between;
+	font-size: 0.9rem;
+	color: var(--color-dark);
+	margin-bottom: 8px;
+}
+
+.fila_inscritos strong {
+	color: var(--color-primary);
+}
+
+/* Barra de progreso de cupos */
+.card_barra_cupo {
+	height: 6px;
+	border-radius: 4px;
+	background-color: var(--color-muted);
+	margin: 10px 0 4px;
+	overflow: hidden;
+}
+
+.card_barra_cupo_relleno {
+	height: 100%;
+	border-radius: 4px;
+}
+
+.cupos_disponibles_texto {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	font-size: 0.85rem;
+	color: #5b6b73;
+	margin-bottom: 18px;
+}
+
+.btn_inscribirme {
+	display: block;
+	width: 100%;
+	text-align: center;
+	background-color: var(--color-secondary);
+	color: var(--color-dark);
+	border: none;
+	font-family: var(--font-primary);
+	font-weight: 700;
+	font-size: 1rem;
+	padding: 14px;
+	border-radius: 10px;
+	cursor: pointer;
+	text-decoration: none;
+	transition: 0.2s ease;
+}
+
+.btn_inscribirme:hover {
+	background-color: #e8924a;
+}
+
+.btn_inscribirme.deshabilitado {
+	background-color: #9aa5ab;
+	color: var(--color-support3);
+	cursor: not-allowed;
+	opacity: 0.85;
+}
+
+.nota_confirmacion {
+	text-align: center;
+	font-size: 0.78rem;
+	color: #8b99a1;
+	margin-top: 10px;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+	background-color: var(--color-primary);
+	color: var(--color-support3);
+}
+
+.contenedor_footer {
+	width: 90%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 1.8fr 1fr 1fr;
+	gap: 150px;
+	padding: 30px 0;
+}
+
+.footer_columna {
+	display: flex;
+	flex-direction: column;
+}
+
+.footer_columna h3 {
+	color: var(--color-secondary);
+	font-size: 1.8rem;
+	font-weight: 800;
+	margin-bottom: 20px;
+}
+
+.footer_columna p {
+	color: var(--color-support3);
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin: 0 0 20px 0;
+}
+
+.footer_columna a {
+	color: var(--color-support3);
+	text-decoration: none;
+	margin-bottom: 20px;
+	transition: color 0.25s ease;
+	width: fit-content;
+}
+
+.footer_columna a:hover {
+	color: var(--color-secondary);
+}
+
+.footer_logo {
+	width: 240px;
+	margin-bottom: 10px;
+	display: block;
+}
+
+.footer_copy {
+	border-top: 1px solid rgba(255, 255, 255, 0.15);
+	text-align: center;
+	padding: 20px;
+	color: #cfcfcf;
+}
+
+/* ---------- MEDIA QUERIES ---------- */
+@media (max-width: 768px) {
+	.cuerpo_detalle {
+		grid-template-columns: 1fr;
+	}
+
+	.panel_lateral {
+		position: static;
+	}
+
+	.grid_info_general {
+		grid-template-columns: 1fr;
+	}
+
+	.banner_detalle {
+		height: 240px;
+	}
+
+	.banner_overlay h1 {
+		font-size: 1.5rem;
+	}
+}

@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+    /* Paleta de colores */
+    --color-primary: #0B4F6C;
+    --color-secondary: #F4A261;
+    --color-bg: #F6F1D1;
+    --color-support1: #1F7A8C;
+    --color-support2: #2E8B57;
+    --color-support3: #ffffff;
+    --color-support4: #ffffff14;
+    --color-dark: #1A2D3D;
+    --color-muted: #EBE5CC;
+    --color-artistic: #7C3AED;
+    --color-recreative: #DC2626;
+
+    /* Tipografía */
+    --font-primary: 'Nunito', sans-serif;
+    --font-secondary: 'Montserrat', sans-serif;
+}
+
+/* Reset básico */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-bg);
+    margin: 0;
+}
+
+/* ---------- ALINEACIÓN GLOBAL DE ICONOS LUCIDE ---------- */
+i[data-lucide] {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ---------- HEADER ---------- */
+.header_principal {
+    background-color: var(--color-primary);
+    padding: 15px 0;
+    border-bottom: 3px solid var(--color-secondary);
+}
+
+.contenedor_header {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 80px;
+    width: auto;
+    display: block;
+    transform: scale(1.25);
+    transition: 0.25s ease;
+}
+
+.logo:hover {
+    transform: scale(1.35);
+}
+
+.menu_header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-right: 80px;
+}
+
+.menu_header a {
+    text-decoration: none;
+    color: var(--color-support3);
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 10px 18px;
+    border-radius: 12px;
+    transition: 0.25s ease;
+}
+
+.menu_header a.activo {
+    background-color: var(--color-support1);
+    padding: 14px 22px;
+}
+
+.menu_header a:hover {
+    background-color: var(--color-support1);
+    transform: scale(1.10);
+}
+
+#admin_header {
+    background-color: var(--color-secondary);
+    color: var(--color-dark);
+    font-weight: 800;
+    padding: 10px 18px;
+    border-radius: 12px;
+}
+
+#admin_header:hover {
+    transform: scale(1.10);
+}
+
+/* ---------- HERO ---------- */
+.hero {
+    background-color: var(--color-primary);
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero_contenido {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+}
+
+.hero_texto h1 {
+    font-size: 5rem;
+    margin: 25px 0;
+    color: var(--color-support3);
+}
+
+.hero_texto span {
+    color: var(--color-secondary);
+}
+
+.hero_informacion {
+    color: var(--color-support3);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.hero_descripcion {
+    color: var(--color-support3);
+    font-size: 18px;
+}
+
+.hero_botones {
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+}
+
+.hero_btn_principal,
+.hero_btn_secundario {
+    text-decoration: none;
+    font-weight: 800;
+    padding: 16px 32px;
+    border-radius: 12px;
+    transition: 0.25s ease;
+}
+
+.hero_btn_principal {
+    background-color: var(--color-secondary);
+    color: var(--color-dark);
+}
+
+.hero_btn_secundario {
+    background-color: var(--color-support1);
+    color: var(--color-support3);
+}
+
+.hero_btn_principal:hover,
+.hero_btn_secundario:hover {
+    transform: scale(1.10);
+}
+
+/* Estadísticas (lado derecho) */
+.hero_estadisticas {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.stat_card {
+    background-color: var(--color-support4);
+    padding: 15px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.stat_card h3 {
+    color: var(--color-secondary);
+    font-size: 3rem;
+    margin: 48px 0 0 0;
+}
+
+.stat_card p {
+    color: var(--color-muted);
+    font-size: 24px;
+    margin: 0 0 24px 0;
+}
+
+/* ---------- ACTIVIDADES DESTACADAS + GRID DE TARJETAS ---------- */
+.actividades_destacadas {
+    background-color: var(--color-bg);
+    padding: 40px 0;
+}
+
+.titulo_actividades {
+    color: var(--color-primary);
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo_actividades h2 {
+    font-size: 2.5rem;
+    margin: 15px 0 25px;
+}
+
+.titulo_actividades p {
+    font-size: 20px;
+}
+
+.titulo_actividades span {
+    font-size: 24px;
+    font-weight: bolder;
+    color: var(--color-secondary);
+}
+
+.btn_actividades {
+    background-color: var(--color-primary);
+    color: var(--color-support3);
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 20px;
+    padding: 16px 48px;
+    border-radius: 5px;
+    transition: 0.25s ease;
+}
+
+.btn_actividades:hover {
+    transform: scale(1.10);
+}
+
+/* Grid de tarjetas (usado en index y actividades) */
+.grid_actividades {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* Tarjeta individual */
+.card_actividad {
+    background-color: var(--color-support3);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(11, 79, 108, 0.1);
+    transition: 0.25s ease;
+}
+
+.card_actividad:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(11, 79, 108, 0.18);
+}
+
+.card_imagen {
+    position: relative;
+    height: 170px;
+    overflow: hidden;
+}
+
+.card_imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card_badge_categoria {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    font-size: 0.7rem;
+    color: var(--color-support3);
+    padding: 5px 12px;
+    border-radius: 20px;
+}
+
+.card_badge_categoria.tecnologico  { background-color: var(--color-support1); }
+.card_badge_categoria.deportivo    { background-color: var(--color-support2); }
+.card_badge_categoria.artistico    { background-color: var(--color-artistic); }
+.card_badge_categoria.cultural     { background-color: var(--color-primary); }
+.card_badge_categoria.gastronomico { background-color: var(--color-secondary); }
+.card_badge_categoria.recreativo   { background-color: var(--color-recreative); }
+
+.card_badge_estado {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    font-size: 0.7rem;
+    color: var(--color-support3);
+    padding: 5px 12px;
+    border-radius: 20px;
+}
+
+.card_badge_estado.lleno      { background-color: var(--color-recreative); }
+.card_badge_estado.disponible { background-color: var(--color-support2); }
+.card_badge_estado.cancelado  { background-color: #6b7280; }
+
+.card_cuerpo {
+    padding: 18px 20px 22px;
+}
+
+.card_cuerpo h3 {
+    font-family: var(--font-primary);
+    font-size: 1.15rem;
+    margin: 0 0 10px 0;
+    color: var(--color-dark);
+}
+
+.card_meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: #5b6b73;
+    margin-bottom: 4px;
+}
+
+.card_barra_cupo {
+    height: 6px;
+    border-radius: 4px;
+    background-color: var(--color-muted);
+    margin: 10px 0 4px;
+    overflow: hidden;
+}
+
+.card_barra_cupo_relleno {
+    height: 100%;
+    border-radius: 4px;
+}
+
+.card_texto_cupo {
+    font-size: 0.78rem;
+    color: #5b6b73;
+    text-align: right;
+    margin-bottom: 14px;
+}
+
+.card_btn_detalle {
+    display: block;
+    text-align: center;
+    background-color: var(--color-primary);
+    color: var(--color-support3);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.2s ease;
+}
+
+.card_btn_detalle:hover {
+    background-color: var(--color-dark);
+}
+
+.card_btn_deshabilitado {
+    display: block;
+    text-align: center;
+    background-color: #9aa5ab;
+    color: var(--color-support3);
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 0.85;
+    cursor: not-allowed;
+}
+
+/* ---------- ¿QUÉ ES CAMPUSFEST? ---------- */
+.sobre_campusfest {
+    background-color: var(--color-support3);
+    padding: 30px 0;
+}
+
+.contenedor_sobre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.sobre_texto {
+    flex: 1;
+    margin-left: 100px;
+}
+
+.sobre_texto h2 {
+    font-size: 2.8rem;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+.sobre_texto p {
+    line-height: 1.5;
+    color: var(--color-primary);
+    font-size: 18px;
+}
+
+.sobre_imagen {
+    flex: 1;
+    margin-right: 100px;
+}
+
+.sobre_imagen img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.categorias {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.categorias span {
+    flex: 1;
+    background-color: var(--color-support1);
+    color: var(--color-support3);
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+    background-color: var(--color-primary);
+    color: var(--color-support3);
+}
+
+.contenedor_footer {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.8fr 1fr 1fr;
+    gap: 150px;
+    padding: 30px 0;
+}
+
+.footer_columna {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_columna h3 {
+    color: var(--color-secondary);
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.footer_columna p {
+    color: var(--color-support3);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 20px 0;
+}
+
+.footer_columna a {
+    color: var(--color-support3);
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: color 0.25s ease;
+    width: fit-content;  /* Solo el texto es clickeable */
+}
+
+.footer_columna a:hover {
+    color: var(--color-secondary);
+}
+
+.footer_logo {
+    width: 240px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.footer_copy {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    text-align: center;
+    padding: 20px;
+    color: var(--color-support3);
+}
+
+/* ---------- MEDIA QUERIES ---------- */
+@media (max-width: 1024px) {
+    .grid_actividades {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .grid_actividades {
+        grid-template-columns: 1fr;
+    }
+}

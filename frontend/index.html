@@ -1,84 +1,277 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CampusFest 2026 - Festival Estudiantil</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CampusFest 2026 - Festival Estudiantil</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/estilos.css">
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/index.css">
 
-    <!-- LLAMAR ICONS -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-
+	<!-- LLAMAR ICONS -->
+	<script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header class="header_principal">
-        <div class="contenedor">
-            <a href="index.html">
-                <img src="img/logo.png" class="logo" alt="CampusFest">
-            </a>
-            <nav class="menu_header">
-                <a href="actividades.html">Actividades</a>
-                <a href="agenda.html">Agenda</a>
-                <a href="stands.html">Stands</a>
-                <a href="contacto.html">Contacto</a>
-                <a href="panel_admin.html" id="admin_header">Panel Admin</a>
-            </nav>
-        </div>
-    </header>
+	<!-- HEADER -->
+	<header class="header_principal">
+		<div class="contenedor_header">
+			<a href="index.html">
+				<img src="img/logo.png" class="logo" alt="CampusFest">
+			</a>
+			<nav class="menu_header">
+				<a href="actividades.html">Actividades</a>
+				<a href="agenda.html">Agenda</a>
+				<a href="stands.html">Stands</a>
+				<a href="contacto.html">Contacto</a>
+				<a href="panel_admin.html" id="admin_header">Panel Admin</a>
+			</nav>
+		</div>
+	</header>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero_contenido">
-            <!-- LADO IZQUIERDO -->
-            <div class="hero_texto">
-                <h1>Campus<span>Fest</span></h1>
-                <p class="hero_informacion">
-                    14, 15, 16 y 17 de Junio, 2026<br>
-                    <span>¡Visítanos en nuestro Campus Principal!</span>
-                </p>
-                <p class="hero_descripcion">
-                    Cuatro días de actividades culturales, deportivas,<br>
-                    tecnológicas, artísticas y gastronómicas.
-                </p>
-                <div class="hero_botones">
-                    <a href="actividades.html" class="hero_btn_principal">Ver Actividades</a>
-                    <a href="#" class="hero_btn_secundario"> ¡Inscribirme! </a>
-                </div>
-            </div>
-            <!-- LADO DERECHO -->
-            <div class="hero_estadisticas">
+	<!-- HERO -->
+	<section class="hero">
+		<div class="hero_contenido">
+			<!-- Lado izquierdo -->
+			<div class="hero_texto">
+				<h1>Campus<span>Fest</span></h1>
+				<p class="hero_informacion">
+					<i data-lucide="calendar-days"></i>
+					14, 15, 16 y 17 de Junio, 2026<br>
+					<span>
+						<i data-lucide="map-pin"></i>
+						¡Visítanos en nuestro Campus Principal!
+					</span>
+				</p>
+				<p class="hero_descripcion">
+					Cuatro días de actividades culturales, deportivas,<br>
+					tecnológicas, artísticas y gastronómicas.
+				</p>
+				<div class="hero_botones">
+					<a href="actividades.html" class="hero_btn_principal">
+						<i data-lucide="calendar-search"></i>
+						Ver Actividades
+					</a>
+					<a href="#" class="hero_btn_secundario">
+						<i data-lucide="user-plus"></i>
+						¡Inscribirme!
+					</a>
+				</div>
+			</div>
+			<!-- Lado derecho -->
+			<div class="hero_estadisticas">
+				<div class="stat_card">
+					<h3>30+</h3>
+					<p>Actividades</p>
+				</div>
+				<div class="stat_card">
+					<h3>5</h3>
+					<p>Categorías</p>
+				</div>
+				<div class="stat_card">
+					<h3>2,000+</h3>
+					<p>Participantes</p>
+				</div>
+				<div class="stat_card">
+					<h3>20+</h3>
+					<p>Stands</p>
+				</div>
+			</div>
+		</div>
+	</section>
 
-                <div class="stat_card">
-                    <h3>30+</h3>
-                    <p>Actividades</p>
-                </div>
+	<!-- ACTIVIDADES DESTACADAS -->
+	<section class="actividades_destacadas">
+		<div class="contenedor_actividades">
+			<div class="titulo_actividades">
+				<div>
+					<h2>Actividades Destacadas</h2>
+					<p>
+						<span>¡No te pierdas lo mejor del festival!</span> Consulta nuestras principales activades<br>
+						y trae a tus amigos y colegas a pasarla en grande en el <span>#CampusFest2026</span>
+					</p>
+				</div>
+				<a href="actividades.html" class="btn_actividades">Ver todas</a>
+			</div>
 
-                <div class="stat_card">
-                    <h3>6</h3>
-                    <p>Categorías</p>
-                </div>
+			<div class="grid_actividades" id="gridActividades">
+				<!-- Hackathon Universitario -->
+				<article class="card_actividad" data-categoria="tecnologico" data-nombre="hackathon universitario" data-lugar="auditorio principal">
+					<div class="card_imagen">
+						<img src="img/hackathon.jpg" alt="Hackathon Universitario">
+						<span class="card_badge_categoria tecnologico">Tecnológico</span>
+					</div>
+					<div class="card_cuerpo">
+						<h3>Hackathon Universitario</h3>
+						<p class="card_meta">
+							<i data-lucide="calendar-days"></i>
+							Sáb 14 jun 2026
+						</p>
+						<p class="card_meta">
+							<i data-lucide="clock"></i>
+							8:00 - 20:00
+						</p>
+						<p class="card_meta">
+							<i data-lucide="map-pin"></i>
+							Auditorio Principal
+						</p>
+						<div class="card_barra_cupo">
+							<div class="card_barra_cupo_relleno" style="width:82%; background-color: var(--color-support1);"></div>
+						</div>
+						<p class="card_texto_cupo">98/120 cupos</p>
+						<a href="detalle_actividad.html" class="card_btn_detalle">Ver detalle →</a>
+					</div>
+				</article>
 
-                <div class="stat_card">
-                    <h3>2,000+</h3>
-                    <p>Participantes</p>
-                </div>
+				<!-- Torneo de Futbol -->
+				<article class="card_actividad" data-categoria="deportivo" data-nombre="torneo de futbol interfacultades" data-lugar="canchas deportivas norte">
+					<div class="card_imagen">
+						<img src="img/futbol.jpg" alt="Torneo de Futbol Interfacultades">
+						<span class="card_badge_categoria deportivo">Deportivo</span>
+						<span class="card_badge_estado lleno">Lleno</span>
+					</div>
+					<div class="card_cuerpo">
+						<h3>Torneo de Fútbol Interfacultades</h3>
+						<p class="card_meta">
+							<i data-lucide="calendar-days"></i>
+							Dom 15 jun 2026
+						</p>
+						<p class="card_meta">
+							<i data-lucide="clock-3"></i>
+							09:00 - 18:00
+						</p>
+						<p class="card_meta">
+							<i data-lucide="map-pin"></i>
+							Canchas Deportivas Norte
+						</p>
+						<div class="card_barra_cupo">
+							<div class="card_barra_cupo_relleno" style="width:100%; background-color: var(--color-recreative);"></div>
+						</div>
+						<p class="card_texto_cupo">200/200 cupos</p>
+						<span class="card_btn_deshabilitado">Sin cupos</span>
+					</div>
+				</article>
 
-                <div class="stat_card">
-                    <h3>20+</h3>
-                    <p>Stands</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
+				<!-- Exposicion de Arte -->
+				<article class="card_actividad" data-categoria="artistico" data-nombre="exposicion de arte contemporaneo" data-lugar="galeria central">
+					<div class="card_imagen">
+						<img src="img/arte.jpg" alt="Exposición de Arte Contemporáneo">
+						<span class="card_badge_categoria artistico">Artístico</span>
+					</div>
+					<div class="card_cuerpo">
+						<h3>Exposición de Arte Contemporáneo</h3>
+						<p class="card_meta">
+							<i data-lucide="calendar-days"></i>
+							Sáb 14 jun 2026
+						</p>
+						<p class="card_meta">
+							<i data-lucide="clock"></i>
+							10:00 - 17:00
+						</p>
+						<p class="card_meta">
+							<i data-lucide="map-pin"></i>
+							Galería Central
+						</p>
+						<div class="card_barra_cupo">
+							<div class="card_barra_cupo_relleno" style="width:48%; background-color: var(--color-artistic);"></div>
+						</div>
+						<p class="card_texto_cupo">145/300 cupos</p>
+						<a href="detalle_actividad.html" class="card_btn_detalle">Ver detalle →</a>
+					</div>
+				</article>
+			</div>
+		</div>
+	</section>
 
+	<!-- ¿QUÉ ES CAMPUSTFEST? -->
+	<section class="sobre_campusfest">
+		<div class="contenedor_sobre">
+			<div class="sobre_texto">
+				<h2>¿Qué es CampusFest?</h2>
+				<p>
+					CampusFest es el festival estudiantil más grande de la universidad.
+					Un espacio donde la creatividad, el talento y la comunidad universitaria se
+					unen para celebrar la diversiad académica y cultural.
+				</p>
+				<p>
+					Durante cuatro días completos, el campus se transforma en un escenario
+					vivo con más de 30 actividades en 5 categorías: culturales, artísitcas, deportivas, tecnológicas y gastronómicas.
+				</p>
+				<div class="categorias">
+					<span>
+						<i data-lucide="book-open"></i>
+						Cultura
+					</span>
+					<span>
+						<i data-lucide="palette"></i>
+						Arte
+					</span>
+					<span>
+						<i data-lucide="trophy"></i>
+						Deporte
+					</span>
+					<span>
+						<i data-lucide="cpu"></i>
+						Tecnología
+					</span>
+					<span>
+						<i data-lucide="utensils-crossed"></i>
+						Gastronomía
+					</span>
+				</div>
+			</div>
+			<div class="sobre_imagen">
+				<img src="img/evento.png" alt="CampusFest">
+			</div>
+		</div>
+	</section>
 
-    <!-- ACTIVAR ICONS -->
-    <script>lucide.createIcons();</script>
+	<!-- FOOTER -->
+	<footer class="footer">
+		<div class="contenedor_footer">
+			<!-- Logo -->
+			<div class="footer_columna">
+				<img src="img/logo.png" alt="CampusFest" class="footer_logo">
+				<p>
+					El festival universitario anual que celebra la diversidad cultural, artística,
+					deportiva, tecnológica y gastronomía de nuestra comunidad.
+				</p>
+			</div>
 
+			<!-- Navegación -->
+			<div class="footer_columna">
+				<h3>Navegación</h3>
+				<a href="index.html">Inicio</a>
+				<a href="actividades.html">Actividades</a>
+				<a href="agenda.html">Agenda</a>
+				<a href="stands.html">Stands</a>
+				<a href="contacto.html">Contacto</a>
+			</div>
+
+			<!-- Contacto -->
+			<div class="footer_columna">
+				<h3>Contacto</h3>
+				<p>
+					<i data-lucide="map-pin"></i>
+					Campus Principal
+				</p>
+				<p>
+					<i data-lucide="phone"></i>
+					+506 8888-8888
+				</p>
+				<p>
+					<i data-lucide="mail"></i>
+					campusfest@universidad.cr
+				</p>
+			</div>
+		</div>
+
+		<div class="footer_copy">
+			<p>© 2026 CampusFest | Todos los derechos reservados.</p>
+		</div>
+	</footer>
+
+	<!-- ACTIVAR ICONS -->
+	<script>lucide.createIcons();</script>
 </body>
 </html>
