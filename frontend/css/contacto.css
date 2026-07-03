@@ -304,6 +304,33 @@ i[data-lucide] {
 	line-height: 1.7;
 }
 
+.contacto_derecha summary {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    cursor:pointer;
+    font-weight:700;
+    color:var(--color-primary);
+}
+
+.contacto_derecha summary::after{
+    content:"▼";
+    font-size:1.3rem;
+    transition:.25s ease;
+}
+
+.contacto_derecha details[open] summary::after{
+    transform:rotate(180deg);
+}
+
+summary::-webkit-details-marker{
+    display:none;
+}
+
+summary{
+    list-style:none;
+}
+
 /* ---------- FOOTER ---------- */
 .footer {
 	background-color: var(--color-primary);
