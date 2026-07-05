@@ -1,22 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 :root {
-    /* Paleta de colores */
-    --color-primary: #0B4F6C;
-    --color-secondary: #F4A261;
-    --color-bg: #F6F1D1;
-    --color-support1: #1F7A8C;
-    --color-support2: #2E8B57;
-    --color-support3: #ffffff;
-    --color-support4: #ffffff14;
-    --color-dark: #1A2D3D;
-    --color-muted: #EBE5CC;
-    --color-artistic: #7C3AED;
-    --color-recreative: #DC2626;
+	/* Paleta de colores */
+	--color-primary: #0B4F6C;
+	--color-secondary: #F4A261;
+	--color-bg: #F6F1D1;
+	--color-support1: #1F7A8C;
+	--color-support2: #2E8B57;
+	--color-support3: #ffffff;
+	--color-support4: #ffffff14;
+	--color-support5: #00000014;
+	--color-dark: #1A2D3D;
+	--color-muted: #EBE5CC;
+	--color-artistic: #7C3AED;
+	--color-recreative: #DC2626;
 
-    /* Tipografía */
-    --font-primary: 'Nunito', sans-serif;
-    --font-secondary: 'Montserrat', sans-serif;
+	/* Tipografía */
+	--font-primary: 'Nunito', sans-serif;
+	--font-secondary: 'Montserrat', sans-serif;
 }
 
 /* Reset básico */
@@ -32,14 +33,14 @@ body {
     margin: 0;
 }
 
-/* ---------- ALINEACIÓN GLOBAL DE ICONOS LUCIDE ---------- */
+/* ALINEACIÓN GLOBAL DE ICONOS LUCIDE */
 i[data-lucide] {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-/* ---------- HEADER ---------- */
+/* HEADER */
 .header_principal {
     background-color: var(--color-primary);
     padding: 15px 0;
@@ -105,11 +106,11 @@ i[data-lucide] {
     transform: scale(1.10);
 }
 
-/* ---------- HERO ---------- */
+/* HERO */
 
 .hero_agenda{
     background:var(--color-primary);
-    color:white;
+    color: var(--color-support3);
     padding:55px 0;
 }
 
@@ -130,7 +131,7 @@ i[data-lucide] {
     opacity:.85;
 }
 
-/* ---------- CONTENIDO ---------- */
+/* CONTENIDO */
 
 .agenda_principal{
     width:80%;
@@ -146,8 +147,8 @@ i[data-lucide] {
 }
 
 .agenda_tab{
-    border:2px solid #d9d9d9;
-    background:white;
+    border:2px solid var(--color-support4);
+    background:var(--color-support3);
     padding:14px 28px;
     border-radius:18px;
     font-weight:800;
@@ -166,17 +167,17 @@ i[data-lucide] {
 
 .agenda_tab.activo{
     background:var(--color-primary);
-    color:white;
+    color:var(--color-support3);
     border:none;
 }
 
 /* Tabla */
 
 .tabla_agenda{
-    background:white;
+    background:var(--color-support3);
     border-radius:22px;
     overflow:hidden;
-    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    box-shadow:0 8px 25px var(--color-support5);
 }
 
 .tabla_header,
@@ -199,7 +200,7 @@ i[data-lucide] {
 
     background:var(--color-primary);
 
-    color:white;
+    color:var(--color-support3);
 
     font-weight:800;
 
@@ -213,7 +214,7 @@ i[data-lucide] {
 
     padding:22px;
 
-    border-bottom:1px solid #ededed;
+    border-bottom:1px solid var(--color-support5);
 
 }
 
@@ -235,7 +236,7 @@ i[data-lucide] {
 
 .agenda_hora span{
 
-    color:#9b9b9b;
+    color:var(--color-dark);
 
     font-size:.9rem;
 
@@ -244,19 +245,14 @@ i[data-lucide] {
 .agenda_lugar{
 
     display:flex;
-
     align-items:center;
-
     gap:8px;
-
-    color:#6d7280;
+    color: var(--color-dark);
 
 }
 
 .agenda_lugar svg{
-
     width:15px;
-
     height:15px;
 
 }
@@ -281,49 +277,49 @@ i[data-lucide] {
 
 .tecnologico{
 
-    background:#0B4F6C;
+    background:var(--color-support1);
 
-    color:white;
+    color:var(--color-support3);
 
 }
 
 .artistico{
 
-    background:#7C3AED;
+    background:var(--color-artistic);
 
-    color:white;
+    color:var(--color-support3);
 
 }
 
 .deportivo{
 
-    background:#2E8B57;
+    background:var(--color-support2);
 
-    color:white;
+    color:var(--color-support3);
 
 }
 
 .cultural{
 
-    background:#2784A2;
+    background:var(--color-primary);
 
-    color:white;
+    color:var(--color-support3);
 
 }
 
 .gastronomico{
 
-    background:#F4A261;
+    background:var(--color-secondary);
 
-    color:white;
+    color:var(--color-support3);
 
 }
 
 .recreativo{
 
-    background:#DC2626;
+    background:var(--color-recreative);
 
-    color:white;
+    color:var(--color-support3);
 
 }
 
@@ -331,7 +327,7 @@ i[data-lucide] {
 
     background:#DFF8E5;
 
-    color:#14803D;
+    color:var(--color-support2);
 
 }
 
@@ -339,28 +335,24 @@ i[data-lucide] {
 
     background:#FFE1E1;
 
-    color:#C62828;
+    color:var(--color-recreative);
 
 }
 
 .cancelado{
 
     background:#ECECEC;
-
-    color:#666;
+    color:var(--color-support5);
 
 }
 
 /* Leyenda */
-
 .leyenda_agenda{
 
     display:flex;
-
     align-items:center;
 
     gap:15px;
-
     margin-top:28px;
 
 }
@@ -381,7 +373,7 @@ i[data-lucide] {
 
     background:#DFF8E5;
 
-    color:#14803D;
+    color:var(--color-support2);
 
 }
 
@@ -389,7 +381,7 @@ i[data-lucide] {
 
     background:#FFE1E1;
 
-    color:#C62828;
+    color:var(--color-recreative);
 
 }
 
@@ -397,11 +389,11 @@ i[data-lucide] {
 
     background:#ECECEC;
 
-    color:#666;
+    color:var(--color-support5);
 
 }
 
-/* ---------- FOOTER ---------- */
+/* FOOTER */
 .footer {
     background-color: var(--color-primary);
     color: var(--color-support3);

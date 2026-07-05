@@ -1,19 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Nunito:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-    --color-primary: #0B4F6C;
-    --color-secondary: #F4A261;
-    --color-bg: #F6F1D1;
-    --color-support1: #1F7A8C;
-    --color-support2: #2E8B57;
-    --color-support3: #ffffff;
-    --color-support4: #ffffff14;
-    --color-dark: #1A2D3D;
-    --color-muted: #EBE5CC;
-    --color-artistic: #7C3AED;
-    --color-recreative: #DC2626;
-    --font-primary: 'Nunito', sans-serif;
-    --font-secondary: 'Montserrat', sans-serif;
+	/* Paleta de colores */
+	--color-primary: #0B4F6C;
+	--color-secondary: #F4A261;
+	--color-bg: #F6F1D1;
+	--color-support1: #1F7A8C;
+	--color-support2: #2E8B57;
+	--color-support3: #ffffff;
+	--color-support4: #ffffff14;
+	--color-support5: #00000014;
+	--color-dark: #1A2D3D;
+	--color-muted: #EBE5CC;
+	--color-artistic: #7C3AED;
+	--color-recreative: #DC2626;
+
+	/* Tipografía */
+	--font-primary: 'Nunito', sans-serif;
+	--font-secondary: 'Montserrat', sans-serif;
 }
 
 *,
@@ -35,14 +39,14 @@ body {
     background-color: #f0f2f5;
 }
 
-/* ---------- SIDEBAR ---------- */
+/* SIDEBAR */
 .sidebar {
     width: 280px;
     background-color: var(--color-primary);
     display: flex;
     flex-direction: column;
     padding: 20px 0;
-    color: white;
+    color: var(--color-support3);
     position: fixed;
     top: 0;
     left: 0;
@@ -81,7 +85,7 @@ body {
     gap: 12px;
     padding: 12px 15px;
     border-radius: 10px;
-    color: white;
+    color: var(--color-support3);
     text-decoration: none;
     font-weight: 600;
     transition: 0.2s;
@@ -104,7 +108,7 @@ body {
     gap: 12px;
     padding: 12px 15px;
     border-radius: 10px;
-    color: white;
+    color: var(--color-support3);
     text-decoration: none;
     font-weight: 600;
     transition: 0.2s;
@@ -115,7 +119,7 @@ body {
     background-color: var(--color-recreative);
 }
 
-/* ---------- CONTENIDO PRINCIPAL ---------- */
+/* CONTENIDO PRINCIPAL */
 .contenido_principal {
     margin-left: 280px;
     flex: 1;
@@ -123,7 +127,7 @@ body {
     flex-direction: column;
 }
 
-/* ---------- HEADER SUPERIOR ---------- */
+/* HEADER SUPERIOR */
 .dashboard_header {
     background: var(--color-support3);
     height: 80px;
@@ -165,7 +169,7 @@ body {
     color: var(--color-dark);
 }
 
-/* ---------- SECCIONES ---------- */
+/* SECCIONES */
 .seccion {
     padding: 30px;
     background-color: var(--color-bg);
@@ -184,7 +188,7 @@ body {
     margin-bottom: 30px;
 }
 
-/* ---------- TARJETAS DE ESTADÍSTICAS (solo resumen en reportes) ---------- */
+/* TARJETAS DE ESTADÍSTICAS (solo resumen en reportes) */
 .resumen_tarjetas {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -192,7 +196,7 @@ body {
 }
 
 .tarjeta_estadistica {
-    background: white;
+    background: var(--color-support3);
     border-radius: 18px;
     padding: 25px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
@@ -229,9 +233,9 @@ body {
     margin-bottom: 15px;
 }
 
-/* ---------- TABLAS ---------- */
+/* TABLAS */
 .tabla_contenedor {
-    background: white;
+    background: var(--color-support3);
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
@@ -311,7 +315,7 @@ tr:hover td {
     border-radius: 12px;
     font-size: 0.8rem;
     font-weight: 700;
-    color: white;
+    color: var(--color-support3);
     display: inline-block;
 }
 
@@ -339,7 +343,7 @@ tr:hover td {
     color: var(--color-recreative);
 }
 
-/* ---------- REPORTES ---------- */
+/* REPORTES */
 .reportes_grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -348,7 +352,7 @@ tr:hover td {
 }
 
 .reporte_bloque {
-    background: white;
+    background: var(--color-support3);
     border-radius: 18px;
     padding: 25px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);

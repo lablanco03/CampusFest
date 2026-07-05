@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 :root {
+	/* Paleta de colores */
 	--color-primary: #0B4F6C;
 	--color-secondary: #F4A261;
 	--color-bg: #F6F1D1;
@@ -8,11 +9,13 @@
 	--color-support2: #2E8B57;
 	--color-support3: #ffffff;
 	--color-support4: #ffffff14;
-    --color-support5: #00000014;
+	--color-support5: #00000014;
 	--color-dark: #1A2D3D;
 	--color-muted: #EBE5CC;
 	--color-artistic: #7C3AED;
 	--color-recreative: #DC2626;
+
+	/* Tipografía */
 	--font-primary: 'Nunito', sans-serif;
 	--font-secondary: 'Montserrat', sans-serif;
 }
@@ -190,7 +193,7 @@ body {
 	width: 100%;
 	padding: 15px;
 	background-color: var(--color-primary);
-	color: white;
+	color: var(--color-support3);
 	border: none;
 	border-radius: 12px;
 	font-weight: 700;
@@ -228,4 +231,84 @@ body {
 	font-size: 0.9rem;
 	color: var(--color-dark);
 	line-height: 1.6;
+}
+
+/* MEDIA QUERIES */
+
+/* Tablets */
+@media (max-width: 900px) {
+	body {
+		overflow-y: auto;
+	}
+
+	.login_contenedor {
+		flex-direction: column;
+	}
+
+	.login_izquierdo,
+	.login_derecho {
+		width: 100%;
+		min-height: 50vh;
+	}
+
+	.login_izquierdo {
+		padding: 40px 20px;
+	}
+
+	.login_logo {
+		width: 250px;
+	}
+
+	.circulo_decorativo {
+		display: none;
+	}
+
+	.login_card {
+		margin: 20px 0;
+	}
+}
+
+/* Teléfonos */
+@media (max-width: 480px) {
+	.login_izquierdo {
+		padding: 30px 15px;
+		min-height: 40vh;
+	}
+
+	.login_logo {
+		width: 200px;
+	}
+
+	.login_subtitulo {
+		font-size: 1rem;
+	}
+
+	.login_descripcion {
+		font-size: 0.9rem;
+	}
+
+	.login_card {
+		padding: 20px 15px;
+		border-radius: 20px;
+		margin: 15px;
+	}
+
+	.login_card h2 {
+		font-size: 1.6rem;
+	}
+
+	.login_card_subtitulo {
+		font-size: 0.85rem;
+		margin-bottom: 20px;
+	}
+
+	.grupo_formulario input {
+		padding: 12px 14px;
+		font-size: 0.95rem;
+	}
+
+	.btn_ingresar {
+		padding: 14px;
+		font-size: 0.95rem;
+	}
 }

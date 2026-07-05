@@ -9,6 +9,7 @@
 	--color-support2: #2E8B57;
 	--color-support3: #ffffff;
 	--color-support4: #ffffff14;
+	--color-support5: #00000014;
 	--color-dark: #1A2D3D;
 	--color-muted: #EBE5CC;
 	--color-artistic: #7C3AED;
@@ -32,14 +33,14 @@ body {
 	margin: 0;
 }
 
-/* ---------- ALINEACIÓN GLOBAL DE ICONOS LUCIDE ---------- */
+/* ALINEACIÓN GLOBAL DE ICONOS LUCIDE */
 i[data-lucide] {
 	display: flex;
 	align-items: center;
 	gap: 10px;
 }
 
-/* ---------- HEADER ---------- */
+/* HEADER */
 .header_principal {
 	background-color: var(--color-primary);
 	padding: 15px 0;
@@ -107,7 +108,7 @@ i[data-lucide] {
 	/* border-radius heredado */
 }
 
-/* ---------- TÍTULO DE LA PÁGINA ---------- */
+/* TÍTULO DE LA PÁGINA */
 .titulo_pagina {
 	background-color: var(--color-primary);
 	padding: 40px 0;
@@ -134,7 +135,7 @@ i[data-lucide] {
 	margin: 0;
 }
 
-/* ---------- BARRA DE BÚSQUEDA Y FILTROS ---------- */
+/* BARRA DE BÚSQUEDA Y FILTROS */
 .barra_filtros {
 	background-color: var(--color-bg);
 	padding: 30px 0;
@@ -200,7 +201,7 @@ i[data-lucide] {
 	font-size: 0.95rem;
 }
 
-/* ---------- GRID DE TARJETAS ---------- */
+/* GRID DE TARJETAS */
 .grid_actividades {
 	width: 90%;
 	max-width: 1100px;
@@ -347,7 +348,7 @@ i[data-lucide] {
 	display: none;
 }
 
-/* ---------- FOOTER ---------- */
+/* FOOTER */
 .footer {
 	background-color: var(--color-primary);
 	color: var(--color-support3);
@@ -407,8 +408,8 @@ i[data-lucide] {
 	color: #cfcfcf;
 }
 
-/* ---------- MEDIA QUERIES ---------- */
-/* Tablet: 3 columnas → 2 columnas */
+/* MEDIA QUERIES */
+/* 3 columnas a 2 columnas */
 @media (max-width: 1024px) {
 	.grid_actividades {
 		grid-template-columns: repeat(2, 1fr);

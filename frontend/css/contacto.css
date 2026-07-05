@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 :root {
+	/* Paleta de colores */
 	--color-primary: #0B4F6C;
 	--color-secondary: #F4A261;
 	--color-bg: #F6F1D1;
@@ -8,11 +9,13 @@
 	--color-support2: #2E8B57;
 	--color-support3: #ffffff;
 	--color-support4: #ffffff14;
+	--color-support5: #00000014;
 	--color-dark: #1A2D3D;
 	--color-muted: #EBE5CC;
 	--color-artistic: #7C3AED;
 	--color-recreative: #DC2626;
 
+	/* Tipografía */
 	--font-primary: 'Nunito', sans-serif;
 	--font-secondary: 'Montserrat', sans-serif;
 }
@@ -30,14 +33,14 @@ body {
 	margin: 0;
 }
 
-/* ---------- ALINEACIÓN GLOBAL DE ICONOS LUCIDE ---------- */
+/* ALINEACIÓN GLOBAL DE ICONOS LUCIDE */
 i[data-lucide] {
 	display: flex;
 	align-items: center;
 	gap: 10px;
 }
 
-/* ---------- HEADER ---------- */
+/* HEADER */
 .header_principal {
 	background-color: var(--color-primary);
 	padding: 15px 0;
@@ -103,7 +106,7 @@ i[data-lucide] {
 	transform: scale(1.10);
 }
 
-/* ---------- TÍTULO DE LA PÁGINA ---------- */
+/* TÍTULO DE LA PÁGINA */
 .titulo_pagina {
 	background-color: var(--color-primary);
 	padding: 40px 0;
@@ -130,9 +133,7 @@ i[data-lucide] {
 	margin: 0;
 }
 
-/* ==========================
-   CONTENIDO DE CONTACTO
-========================== */
+/* CONTENIDO DE CONTACTO */
 .contacto {
 	background-color: var(--color-bg);
 	padding: 70px 0;
@@ -148,18 +149,14 @@ i[data-lucide] {
 	align-items: start;
 }
 
-/* ==========================
-   COLUMNA IZQUIERDA
-========================== */
+/* COLUMNA IZQUIERDA */
 .contacto_izquierda {
 	display: flex;
 	flex-direction: column;
 	gap: 40px;
 }
 
-/* ==========================
-   TÍTULOS DE SECCIONES
-========================== */
+/* TÍTULOS DE SECCIONES */
 .comite h2,
 .consulta h2,
 .contacto_derecha h2 {
@@ -168,9 +165,7 @@ i[data-lucide] {
 	margin-bottom: 25px;
 }
 
-/* ==========================
-   TARJETA COMITÉ
-========================== */
+/* TARJETA COMITÉ */
 .info_contacto {
 	background: var(--color-support3);
 	border-radius: 18px;
@@ -210,9 +205,7 @@ i[data-lucide] {
 	line-height: 1.5;
 }
 
-/* ==========================
-   FORMULARIO
-========================== */
+/* FORMULARIO */
 .consulta form {
 	background: white;
 	border-radius: 18px;
@@ -271,9 +264,7 @@ i[data-lucide] {
 	background: var(--color-support1);
 }
 
-/* ==========================
-   PREGUNTAS FRECUENTES
-========================== */
+/* PREGUNTAS FRECUENTES */
 .contacto_derecha details {
 	background: white;
 	border-radius: 14px;
@@ -331,7 +322,7 @@ summary{
     list-style:none;
 }
 
-/* ---------- FOOTER ---------- */
+/* FOOTER */
 .footer {
 	background-color: var(--color-primary);
 	color: var(--color-support3);
@@ -391,9 +382,8 @@ summary{
 	color: #cfcfcf;
 }
 
-/* ==========================
-   RESPONSIVE
-========================== */
+/* RESPONSIVE 
+   Para que se ajuste lo mejor posible */
 @media (max-width: 900px) {
 	.contenedor_contacto {
 		grid-template-columns: 1fr;

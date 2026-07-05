@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 :root {
+	/* Paleta de colores */
 	--color-primary: #0B4F6C;
 	--color-secondary: #F4A261;
 	--color-bg: #F6F1D1;
@@ -8,11 +9,13 @@
 	--color-support2: #2E8B57;
 	--color-support3: #ffffff;
 	--color-support4: #ffffff14;
+	--color-support5: #00000014;
 	--color-dark: #1A2D3D;
 	--color-muted: #EBE5CC;
 	--color-artistic: #7C3AED;
 	--color-recreative: #DC2626;
 
+	/* Tipografía */
 	--font-primary: 'Nunito', sans-serif;
 	--font-secondary: 'Montserrat', sans-serif;
 }
@@ -29,14 +32,14 @@ body {
 	margin: 0;
 }
 
-/* ---------- ALINEACIÓN GLOBAL DE ICONOS LUCIDE ---------- */
+/* ALINEACIÓN GLOBAL DE ICONOS LUCIDE */
 i[data-lucide] {
 	display: flex;
 	align-items: center;
 	gap: 10px;
 }
 
-/* ---------- HEADER ---------- */
+/* HEADER */
 .header_principal {
 	background-color: var(--color-primary);
 	padding: 15px 0;
@@ -102,7 +105,7 @@ i[data-lucide] {
 	transform: scale(1.10);
 }
 
-/* ---------- BANNER DETALLE ---------- */
+/* BANNER DETALLE */
 .banner_detalle {
 	position: relative;
 	height: 320px;
@@ -205,7 +208,7 @@ i[data-lucide] {
 .card_badge_estado.disponible { background-color: var(--color-support2); }
 .card_badge_estado.cancelado  { background-color: #6b7280; }
 
-/* ---------- CUERPO DE LA PÁGINA: 2 COLUMNAS ---------- */
+/* CUERPO DE LA PÁGINA: 2 COLUMNAS */
 .cuerpo_detalle {
 	width: 90%;
 	max-width: 1100px;
@@ -262,7 +265,7 @@ i[data-lucide] {
 	margin: 0;
 }
 
-/* ---------- COLUMNA LATERAL: ESTADO DE CUPO + INSCRIPCIÓN ---------- */
+/* COLUMNA LATERAL: ESTADO DE CUPO + INSCRIPCIÓN */
 .panel_lateral {
 	background-color: var(--color-support3);
 	border-radius: 16px;
@@ -349,7 +352,7 @@ i[data-lucide] {
 	margin-top: 10px;
 }
 
-/* ---------- FOOTER ---------- */
+/* FOOTER */
 .footer {
 	background-color: var(--color-primary);
 	color: var(--color-support3);
@@ -409,7 +412,7 @@ i[data-lucide] {
 	color: #cfcfcf;
 }
 
-/* ---------- MEDIA QUERIES ---------- */
+/* MEDIA QUERIES */
 @media (max-width: 768px) {
 	.cuerpo_detalle {
 		grid-template-columns: 1fr;
