@@ -408,6 +408,7 @@ i[data-lucide] {
 	color: #cfcfcf;
 }
 
+
 /* MEDIA QUERIES */
 /* 3 columnas a 2 columnas */
 @media (max-width: 1024px) {
@@ -415,22 +416,18 @@ i[data-lucide] {
 		grid-template-columns: repeat(2, 1fr);
 	}
 }
-
-/* Celular: 2 columnas → 1 columna, filtros compactos */
+/* Celular: 2 columnas s 1 columna, filtros compactos */
 @media (max-width: 640px) {
 	.titulo_pagina h1 {
 		font-size: 1.9rem;
 	}
-
 	.filtros_categoria {
 		gap: 8px;
 	}
-
 	.filtro_btn {
 		font-size: 0.82rem;
 		padding: 8px 14px;
 	}
-
 	.grid_actividades {
 		grid-template-columns: 1fr;
 	}

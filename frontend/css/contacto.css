@@ -382,10 +382,21 @@ summary{
 	color: #cfcfcf;
 }
 
-/* RESPONSIVE 
-   Para que se ajuste lo mejor posible */
+/* RESPONSIVE */
 @media (max-width: 900px) {
 	.contenedor_contacto {
 		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 480px) {
+	.contacto {
+		padding: 40px 0;
+	}
+	.consulta form {
+		padding: 20px;
+	}
+	.btn_enviar {
+		padding: 14px;
 	}
 }

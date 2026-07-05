@@ -505,13 +505,12 @@ i[data-lucide] {
 
 /* MEDIA QUERIES */
 @media (max-width: 1024px) {
-    .grid_actividades {
-        grid-template-columns: repeat(2, 1fr);
-    }
+	.grid_actividades {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
-
 @media (max-width: 640px) {
-    .grid_actividades {
-        grid-template-columns: 1fr;
-    }
+	.grid_actividades {
+		grid-template-columns: 1fr;
+	}
 }
