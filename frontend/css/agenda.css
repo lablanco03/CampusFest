@@ -105,6 +105,302 @@ i[data-lucide] {
     transform: scale(1.10);
 }
 
+/* ---------- HERO ---------- */
+
+.hero_agenda{
+    background:var(--color-primary);
+    color:white;
+    padding:55px 0;
+}
+
+.contenedor_agenda_hero{
+    width:80%;
+    margin:auto;
+}
+
+.contenedor_agenda_hero h1{
+    margin:0;
+    font-size:3rem;
+    font-family:var(--font-secondary);
+}
+
+.contenedor_agenda_hero p{
+    margin-top:12px;
+    font-size:1.2rem;
+    opacity:.85;
+}
+
+/* ---------- CONTENIDO ---------- */
+
+.agenda_principal{
+    width:80%;
+    margin:40px auto 70px;
+}
+
+/* Tabs */
+
+.agenda_tabs{
+    display:flex;
+    gap:18px;
+    margin-bottom:30px;
+}
+
+.agenda_tab{
+    border:2px solid #d9d9d9;
+    background:white;
+    padding:14px 28px;
+    border-radius:18px;
+    font-weight:800;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    transition:.25s;
+    font-family:var(--font-secondary);
+    font-size:1rem;
+}
+
+.agenda_tab:hover{
+    transform:translateY(-2px);
+}
+
+.agenda_tab.activo{
+    background:var(--color-primary);
+    color:white;
+    border:none;
+}
+
+/* Tabla */
+
+.tabla_agenda{
+    background:white;
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.tabla_header,
+.fila_agenda{
+
+    display:grid;
+
+    grid-template-columns:
+
+    130px
+    2fr
+    2fr
+    180px
+    150px;
+
+    align-items:center;
+}
+
+.tabla_header{
+
+    background:var(--color-primary);
+
+    color:white;
+
+    font-weight:800;
+
+    padding:22px;
+
+    font-family:var(--font-secondary);
+
+}
+
+.fila_agenda{
+
+    padding:22px;
+
+    border-bottom:1px solid #ededed;
+
+}
+
+.fila_agenda:last-child{
+
+    border-bottom:none;
+
+}
+
+.agenda_hora strong{
+
+    display:block;
+
+    color:var(--color-primary);
+
+    font-size:1.25rem;
+
+}
+
+.agenda_hora span{
+
+    color:#9b9b9b;
+
+    font-size:.9rem;
+
+}
+
+.agenda_lugar{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#6d7280;
+
+}
+
+.agenda_lugar svg{
+
+    width:15px;
+
+    height:15px;
+
+}
+
+/* Badges */
+
+.card_badge_categoria,
+
+.card_badge_estado{
+
+    display:inline-block;
+
+    padding:6px 14px;
+
+    border-radius:999px;
+
+    font-size:.85rem;
+
+    font-weight:700;
+
+}
+
+.tecnologico{
+
+    background:#0B4F6C;
+
+    color:white;
+
+}
+
+.artistico{
+
+    background:#7C3AED;
+
+    color:white;
+
+}
+
+.deportivo{
+
+    background:#2E8B57;
+
+    color:white;
+
+}
+
+.cultural{
+
+    background:#2784A2;
+
+    color:white;
+
+}
+
+.gastronomico{
+
+    background:#F4A261;
+
+    color:white;
+
+}
+
+.recreativo{
+
+    background:#DC2626;
+
+    color:white;
+
+}
+
+.disponible{
+
+    background:#DFF8E5;
+
+    color:#14803D;
+
+}
+
+.lleno{
+
+    background:#FFE1E1;
+
+    color:#C62828;
+
+}
+
+.cancelado{
+
+    background:#ECECEC;
+
+    color:#666;
+
+}
+
+/* Leyenda */
+
+.leyenda_agenda{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-top:28px;
+
+}
+
+.leyenda_agenda span{
+
+    padding:6px 14px;
+
+    border-radius:999px;
+
+    font-weight:700;
+
+    font-size:.85rem;
+
+}
+
+.leyenda_agenda span:nth-child(1){
+
+    background:#DFF8E5;
+
+    color:#14803D;
+
+}
+
+.leyenda_agenda span:nth-child(2){
+
+    background:#FFE1E1;
+
+    color:#C62828;
+
+}
+
+.leyenda_agenda span:nth-child(3){
+
+    background:#ECECEC;
+
+    color:#666;
+
+}
+
 /* ---------- FOOTER ---------- */
 .footer {
     background-color: var(--color-primary);
@@ -164,3 +460,4 @@ i[data-lucide] {
     padding: 20px;
     color: var(--color-support3);
 }
+

@@ -29,6 +29,58 @@
 		</div>
 	</header>
 
+    <!-- HERO DE LA PAGINA -->
+<section class="hero_agenda">
+    <div class="contenedor_agenda_hero">
+        <h1>Agenda del Festival</h1>
+        <p>Cronograma completo de actividades por día</p>
+    </div>
+</section>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main class="agenda_principal">
+
+    <!-- BOTONES DE DIAS -->
+    <div class="agenda_tabs">
+
+        <button id="btnSabado" class="agenda_tab activo">
+            <i data-lucide="calendar"></i>
+            Sáb 14 Jun
+        </button>
+
+        <button id="btnDomingo" class="agenda_tab">
+            <i data-lucide="calendar"></i>
+            Dom 15 Jun
+        </button>
+
+    </div>
+
+    <!-- TABLA -->
+    <section class="tabla_agenda">
+
+        <div class="tabla_header">
+            <div>Hora</div>
+            <div>Actividad</div>
+            <div>Lugar</div>
+            <div>Categoría</div>
+            <div>Estado</div>
+        </div>
+
+        <div id="cuerpoAgenda"></div>
+
+    </section>
+
+    <!-- LEYENDA -->
+    <div class="leyenda_agenda">
+
+        <span>Disponible</span>
+        <span>Lleno</span>
+        <span>Cancelado</span>
+
+    </div>
+
+</main>
+
 	<!-- FOOTER -->
 	<footer class="footer">
 		<div class="contenedor_footer">
@@ -75,6 +127,11 @@
 	</footer>
 
 	<!-- ACTIVAR ICONS -->
-	<script>lucide.createIcons();</script>
+	<script src="js/agenda.js"></script>
+
+<script>
+    lucide.createIcons();
+</script>
+
 </body>
 </html>
