@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - CampusFest 2026</title>
+    <link rel="stylesheet" href="css/panel_admin.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Sidebar fijo -->
+    <aside class="sidebar">
+        <div class="sidebar_header">
+            <a href="index.html">
+                <img src="img/logo.jpg" alt="CampusFest" class="sidebar_logo">
+            </a>
+        </div>
+        <nav class="sidebar_menu">
+            <a href="#actividades" class="menu_item">
+                <i data-lucide="book-open"></i> <span>Actividades</span>
+            </a>
+            <a href="#inscripciones" class="menu_item">
+                <i data-lucide="clipboard-list"></i> <span>Inscripciones</span>
+            </a>
+            <a href="#stands" class="menu_item">
+                <i data-lucide="store"></i> <span>Stands</span>
+            </a>
+            <a href="#reportes" class="menu_item">
+                <i data-lucide="chart-column"></i> <span>Reportes</span>
+            </a>
+        </nav>
+        <div class="sidebar_footer">
+            <a href="login_admin.html" class="btn_cerrar_sesion">
+                <i data-lucide="log-out"></i> <span>Cerrar sesión</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="contenido_principal">
+        <!-- Header común (fijo en scroll) -->
+        <header class="dashboard_header">
+            <div class="header_izquierda">
+                <h1>Panel de Administración</h1>
+            </div>
+            <div class="header_derecha">
+                <span class="correo_admin">admin@campusfest.edu.cr</span>
+                <div class="avatar_admin">A</div>
+            </div>
+        </header>
+
+        <!-- SECCIÓN ACTIVIDADES -->
+        <section id="actividades" class="seccion">
+            <h2 class="seccion_titulo">Actividades</h2>
+            <p class="seccion_subtitulo">Gestión de Actividades</p>
+
+            <div class="tabla_contenedor">
+                <div class="tabla_header">
+                    <h2>Todas las actividades</h2>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Categoría</th>
+                            <th>Fecha</th>
+                            <th>Cupo</th>
+                            <th style="text-align:right;">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Hackathon Universitario</td>
+                            <td><span class="cat_badge cat_tecnologico">Tecnológico</span></td>
+                            <td>14 jun 2026</td>
+                            <td>98/120</td>
+                            <td class="acciones">
+                                <span class="icono_accion"><i data-lucide="edit"></i></span>
+                                <span class="icono_accion"><i data-lucide="x"></i></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Torneo de Fútbol Interfacultades</td>
+                            <td><span class="cat_badge cat_deportivo">Deportivo</span></td>
+                            <td>15 jun 2026</td>
+                            <td>200/200</td>
+                            <td class="acciones">
+                                <span class="icono_accion"><i data-lucide="edit"></i></span>
+                                <span class="icono_accion"><i data-lucide="x"></i></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Exposición de Arte Contemporáneo</td>
+                            <td><span class="cat_badge cat_artistico">Artístico</span></td>
+                            <td>14 jun 2026</td>
+                            <td>145/300</td>
+                            <td class="acciones">
+                                <span class="icono_accion"><i data-lucide="edit"></i></span>
+                                <span class="icono_accion"><i data-lucide="x"></i></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Festival Gastronómico</td>
+                            <td><span class="cat_badge cat_gastronomico">Gastronómico</span></td>
+                            <td>15 jun 2026</td>
+                            <td>312/500</td>
+                            <td class="acciones">
+                                <span class="icono_accion"><i data-lucide="edit"></i></span>
+                                <span class="icono_accion"><i data-lucide="x"></i></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Concierto de Bandas Universitarias</td>
+                            <td><span class="cat_badge cat_cultural">Cultural</span></td>
+                            <td>15 jun 2026</td>
+                            <td>650/800</td>
+                            <td class="acciones">
+                                <span class="icono_accion"><i data-lucide="edit"></i></span>
+                                <span class="icono_accion"><i data-lucide="x"></i></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Taller de Robótica e IA</td>
+                            <td><span class="cat_badge cat_tecnologico">Tecnológico</span></td>
+                            <td>14 jun 2026</td>
+                            <td>38/40</td>
+                            <td class="acciones">
+                                <span class="icono_accion"><i data-lucide="edit"></i></span>
+                                <span class="icono_accion"><i data-lucide="x"></i></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECCIÓN INSCRIPCIONES -->
+        <section id="inscripciones" class="seccion">
+            <h2 class="seccion_titulo">Inscripciones</h2>
+            <p class="seccion_subtitulo">Gestión de Inscripciones</p>
+
+            <div class="tabla_contenedor">
+                <div class="tabla_header">
+                    <h2>Últimas inscripciones</h2>
+                    <span class="badge_registros">5 registros</span>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Estudiante</th>
+                            <th>Identificación</th>
+                            <th>Correo</th>
+                            <th>Actividad</th>
+                            <th>Carrera</th>
+                            <th>Fecha</th>
+                            <th style="text-align:right;">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><span class="avatar_inicial">S</span> Sebastián Castro</td>
+                            <td>1-2345-6789</td>
+                            <td>scastro@uni.cr</td>
+                            <td>Hackathon Universitario</td>
+                            <td>Ing. Informática</td>
+                            <td>10 jun 2026</td>
+                            <td class="acciones">
+                                <span class="icono_accion"><i data-lucide="edit"></i></span>
+                                <span class="icono_accion"><i data-lucide="x"></i></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><span class="avatar_inicial">V</span> Valentina Mora</td>
+                            <td>1-9876-5432</td>
+                            <td>vmora@uni.cr</td>
+                            <td>Festival Gastronómico</td>
+                            <td>Gastronomía</td>
+                            <td>12 jun 2026</td>
+                            <td class="acciones">
+                                <span class="icono_accion"><i data-lucide="edit"></i></span>
+                                <span class="icono_accion"><i data-lucide="x"></i></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><span class="avatar_inicial">A</span> Andrés Ríos</td>
+                            <td>2-3456-7890</td>
+                            <td>arios@uni.cr</td>
+                            <td>Concierto de Bandas</td>
+                            <td>Música</td>
+                            <td>11 jun 2026</td>
+                            <td class="acciones">
+                                <span class="icono_accion"><i data-lucide="edit"></i></span>
+                                <span class="icono_accion"><i data-lucide="x"></i></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><span class="avatar_inicial">C</span> Camila Herrera</td>
+                            <td>1-4567-8901</td>
+                            <td>cherrera@uni.cr</td>
+                            <td>Exposición de Arte</td>
+                            <td>Artes Plásticas</td>
+                            <td>9 jun 2026</td>
+                            <td class="acciones">
+                                <span class="icono_accion"><i data-lucide="edit"></i></span>
+                                <span class="icono_accion"><i data-lucide="x"></i></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><span class="avatar_inicial">J</span> Julio Pérez</td>
+                            <td>1-5678-9012</td>
+                            <td>jperez@uni.cr</td>
+                            <td>Taller de Robótica</td>
+                            <td>Ing. Mecatrónica</td>
+                            <td>13 jun 2026</td>
+                            <td class="acciones">
+                                <span class="icono_accion"><i data-lucide="edit"></i></span>
+                                <span class="icono_accion"><i data-lucide="x"></i></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECCIÓN STANDS -->
+        <section id="stands" class="seccion">
+            <h2 class="seccion_titulo">Stands</h2>
+            <p class="seccion_subtitulo">Gestión de Stands</p>
+
+            <div class="tabla_contenedor">
+                <div class="tabla_header">
+                    <h2>Todos los stands</h2>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Categoría</th>
+                            <th>Responsable</th>
+                            <th>Ubicación</th>
+                            <th style="text-align:right;">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Ingeniería de Sistemas</td>
+                            <td><span class="cat_badge cat_tecnologico">Tecnológico</span></td>
+                            <td>Ing. Carlos Mendoza</td>
+                            <td>Pabellón A - Stand 3</td>
+                            <td class="acciones">
+                                <span class="icono_accion"><i data-lucide="edit"></i></span>
+                                <span class="icono_accion"><i data-lucide="x"></i></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Gastronomía Fusión</td>
+                            <td><span class="cat_badge cat_gastronomico">Gastronómico</span></td>
+                            <td>Chef Ana Torres</td>
+                            <td>Plaza Central</td>
+                            <td class="acciones">
+                                <span class="icono_accion"><i data-lucide="edit"></i></span>
+                                <span class="icono_accion"><i data-lucide="x"></i></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Arte y Diseño Gráfico</td>
+                            <td><span class="cat_badge cat_artistico">Artístico</span></td>
+                            <td>Dra. Lucía Ramírez</td>
+                            <td>Galería Central</td>
+                            <td class="acciones">
+                                <span class="icono_accion"><i data-lucide="edit"></i></span>
+                                <span class="icono_accion"><i data-lucide="x"></i></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Emprendimiento Universitario</td>
+                            <td><span class="cat_badge cat_cultural">Cultural</span></td>
+                            <td>Diego Vásquez</td>
+                            <td>Pabellón B</td>
+                            <td class="acciones">
+                                <span class="icono_accion"><i data-lucide="edit"></i></span>
+                                <span class="icono_accion"><i data-lucide="x"></i></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Deporte y Bienestar</td>
+                            <td><span class="cat_badge cat_deportivo">Deportivo</span></td>
+                            <td>María González</td>
+                            <td>Canchas Norte</td>
+                            <td class="acciones">
+                                <span class="icono_accion"><i data-lucide="edit"></i></span>
+                                <span class="icono_accion"><i data-lucide="x"></i></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECCIÓN REPORTES -->
+        <section id="reportes" class="seccion">
+            <h2 class="seccion_titulo">Reportes</h2>
+            <p class="seccion_subtitulo">Estadísticas del festival</p>
+
+            <div class="reportes_grid">
+                <div class="reporte_bloque">
+                    <h3>Actividades por Categoría</h3>
+                    <div class="barra_item">
+                        <div class="barra_label"><span>Tecnológico</span><span>2 (33%)</span></div>
+                        <div class="barra_fondo"><div class="barra_relleno bg_tecnologico" style="width:33%"></div></div>
+                    </div>
+                    <div class="barra_item">
+                        <div class="barra_label"><span>Cultural</span><span>1 (17%)</span></div>
+                        <div class="barra_fondo"><div class="barra_relleno bg_cultural" style="width:17%"></div></div>
+                    </div>
+                    <div class="barra_item">
+                        <div class="barra_label"><span>Deportivo</span><span>1 (17%)</span></div>
+                        <div class="barra_fondo"><div class="barra_relleno bg_deportivo" style="width:17%"></div></div>
+                    </div>
+                    <div class="barra_item">
+                        <div class="barra_label"><span>Artístico</span><span>1 (17%)</span></div>
+                        <div class="barra_fondo"><div class="barra_relleno bg_artistico" style="width:17%"></div></div>
+                    </div>
+                    <div class="barra_item">
+                        <div class="barra_label"><span>Gastronómico</span><span>1 (17%)</span></div>
+                        <div class="barra_fondo"><div class="barra_relleno bg_gastronomico" style="width:17%"></div></div>
+                    </div>
+                </div>
+
+                <div class="reporte_bloque">
+                    <h3>Ocupación por Actividad</h3>
+                    <div class="barra_item">
+                        <div class="barra_label"><span>Hackathon Universitario</span><span>82%</span></div>
+                        <div class="barra_fondo"><div class="barra_relleno bg_tecnologico" style="width:82%"></div></div>
+                    </div>
+                    <div class="barra_item">
+                        <div class="barra_label"><span>Torneo de Fútbol</span><span>100%</span></div>
+                        <div class="barra_fondo"><div class="barra_relleno bg_deportivo" style="width:100%"></div></div>
+                    </div>
+                    <div class="barra_item">
+                        <div class="barra_label"><span>Exposición de Arte</span><span>48%</span></div>
+                        <div class="barra_fondo"><div class="barra_relleno bg_artistico" style="width:48%"></div></div>
+                    </div>
+                    <div class="barra_item">
+                        <div class="barra_label"><span>Festival Gastronómico</span><span>62%</span></div>
+                        <div class="barra_fondo"><div class="barra_relleno bg_gastronomico" style="width:62%"></div></div>
+                    </div>
+                    <div class="barra_item">
+                        <div class="barra_label"><span>Concierto de Bandas</span><span>81%</span></div>
+                        <div class="barra_fondo"><div class="barra_relleno bg_cultural" style="width:81%"></div></div>
+                    </div>
+                    <div class="barra_item">
+                        <div class="barra_label"><span>Taller de Robótica</span><span>95%</span></div>
+                        <div class="barra_fondo"><div class="barra_relleno bg_tecnologico" style="width:95%"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resumen_tarjetas">
+                <div class="tarjeta_estadistica">
+                    <div class="tarjeta_icono"><i data-lucide="book"></i></div>
+                    <div class="tarjeta_numero">30</div>
+                    <div class="tarjeta_texto">Actividades Totales</div>
+                </div>
+                <div class="tarjeta_estadistica">
+                    <div class="tarjeta_icono"><i data-lucide="users"></i></div>
+                    <div class="tarjeta_numero">1,843</div>
+                    <div class="tarjeta_texto">Inscripciones</div>
+                </div>
+                <div class="tarjeta_estadistica">
+                    <div class="tarjeta_icono"><i data-lucide="store"></i></div>
+                    <div class="tarjeta_numero">20</div>
+                    <div class="tarjeta_texto">Stands</div>
+                </div>
+                <div class="tarjeta_estadistica">
+                    <div class="tarjeta_icono"><i data-lucide="calendar"></i></div>
+                    <div class="tarjeta_numero">4</div>
+                    <div class="tarjeta_texto">Días de Festival</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

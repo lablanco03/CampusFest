@@ -1,42 +1,196 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Festival Estudiantil</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contacto - Festival Estudiantil</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/estilos.css">
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/contacto.css">
 
-    <!-- LLAMAR ICONS -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-
+	<!-- LLAMAR ICONS -->
+	<script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header class="header_principal">
-        <div class="contenedor">
+	<!-- HEADER -->
+	<header class="header_principal">
+		<div class="contenedor_header">
+			<a href="index.html">
+				<img src="img/logo.jpg" class="logo" alt="CampusFest">
+			</a>
+			<nav class="menu_header">
+				<a href="actividades.html">Actividades</a>
+				<a href="agenda.html">Agenda</a>
+				<a href="stands.html">Stands</a>
+				<a href="contacto.html" class="activo">Contacto</a>
+				<a href="login_admin.html" id="admin_header">Panel Administrador</a>
+			</nav>
+		</div>
+	</header>
 
-            <a href="index.html">
-                <img src="img/logo.png" class="logo" alt="CampusFest">
-            </a>
+	<!-- TÍTULO DE LA PÁGINA -->
+	<section class="titulo_pagina">
+		<div class="contenedor">
+			<h1>Contacto</h1>
+			<p>El comité organizador está aquí para ayudarte</p>
+		</div>
+	</section>
 
-            <nav class="menu_header">
-                <a href="actividades.html">Actividades</a>
-                <a href="agenda.html">Agenda</a>
-                <a href="stands.html">Stands</a>
-                <a href="contacto.html" class="activo">Contacto</a>
-                <a href="panel_admin.html" id="admin_header">Panel Admin</a>
-            </nav>
+	<!-- CONTENIDO PRINCIPAL -->
+	<section class="contacto">
+		<div class="contenedor_contacto">
 
-        </div>
-    </header>
-    
+			<!-- COLUMNA IZQUIERDA -->
+			<div class="contacto_izquierda">
 
+				<!-- Comité organizador -->
+				<div class="comite">
+					<h2>Comité Organizador</h2>
+					<div class="info_contacto">
 
-    <!-- ACTIVAR ICONS -->
-    <script>lucide.createIcons();</script>
+						<div class="item_contacto">
+							<i data-lucide="mail"></i>
+							<div>
+								<span>Correo</span>
+								<p>campusfest@universidad.cr</p>
+							</div>
+						</div>
 
+						<div class="item_contacto">
+							<i data-lucide="phone"></i>
+							<div>
+								<span>Teléfono</span>
+								<p>+506 8888-8888</p>
+							</div>
+						</div>
+
+						<div class="item_contacto">
+							<i data-lucide="map-pin"></i>
+							<div>
+								<span>Ubicación</span>
+								<p>Campus Principal, San José</p>
+							</div>
+						</div>
+
+						<div class="item_contacto">
+							<i data-lucide="clock-3"></i>
+							<div>
+								<span>Atención</span>
+								<p>Lunes a Viernes · 8:00 a.m. - 5:00 p.m.</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<!-- Formulario -->
+				<div class="consulta">
+					<h2>Enviar consulta</h2>
+					<form>
+
+						<div class="grupo_formulario">
+							<label for="txtNombre">Nombre completo</label>
+							<input type="text" id="txtNombre" placeholder="Ingrese su nombre completo">
+						</div>
+
+						<div class="grupo_formulario">
+							<label for="txtCorreo">Correo electrónico</label>
+							<input type="email" id="txtCorreo" placeholder="correo@universidad.cr">
+						</div>
+
+						<div class="grupo_formulario">
+							<label for="txtMensaje">Mensaje</label>
+							<textarea id="txtMensaje" rows="5" placeholder="Escriba aquí su consulta..."></textarea>
+						</div>
+
+						<button type="submit" class="btn_enviar">Enviar mensaje</button>
+
+					</form>
+				</div>
+
+			</div>
+
+			<!-- COLUMNA DERECHA -->
+			<div class="contacto_derecha">
+				<h2>Preguntas Frecuentes</h2>
+
+				<details>
+					<summary>¿El festival es abierto al público general?</summary>
+					<p>Sí. Todas las actividades son abiertas al público, salvo aquellas que indiquen cupo limitado.</p>
+				</details>
+
+				<details>
+					<summary>¿Cómo me inscribo en una actividad?</summary>
+					<p>Desde la sección Actividades podrás ingresar a cada evento y completar el formulario de inscripción.</p>
+				</details>
+
+				<details>
+					<summary>¿Hay costo de entrada al festival?</summary>
+					<p>No. La entrada al CampusFest es totalmente gratuita.</p>
+				</details>
+
+				<details>
+					<summary>¿Puedo cancelar mi inscripción?</summary>
+					<p>Sí. Puedes cancelar tu inscripción antes de la fecha de la actividad desde tu perfil o contactándonos.</p>
+				</details>
+
+				<details>
+					<summary>¿Cómo llegar al campus el día del festival?</summary>
+					<p>Puedes consultar el mapa del campus en la sección Agenda o utilizar aplicaciones de navegación.</p>
+				</details>
+
+			</div>
+
+		</div>
+	</section>
+
+	<!-- FOOTER -->
+	<footer class="footer">
+		<div class="contenedor_footer">
+			<!-- Logo -->
+			<div class="footer_columna">
+				<img src="img/logo.jpg" alt="CampusFest" class="footer_logo">
+				<p>
+					El festival universitario anual que celebra la diversidad cultural, artística,
+					deportiva, tecnológica y gastronomía de nuestra comunidad.
+				</p>
+			</div>
+
+			<!-- Navegación -->
+			<div class="footer_columna">
+				<h3>Navegación</h3>
+				<a href="index.html">Inicio</a>
+				<a href="actividades.html">Actividades</a>
+				<a href="agenda.html">Agenda</a>
+				<a href="stands.html">Stands</a>
+				<a href="contacto.html">Contacto</a>
+			</div>
+
+			<!-- Contacto -->
+			<div class="footer_columna">
+				<h3>Contacto</h3>
+				<p>
+					<i data-lucide="map-pin"></i>
+					Campus Principal
+				</p>
+				<p>
+					<i data-lucide="phone"></i>
+					+506 8888-8888
+				</p>
+				<p>
+					<i data-lucide="mail"></i>
+					campusfest@universidad.cr
+				</p>
+			</div>
+		</div>
+
+		<div class="footer_copy">
+			<p>© 2026 CampusFest | Todos los derechos reservados.</p>
+		</div>
+	</footer>
+
+	<!-- ACTIVAR ICONS -->
+	<script>lucide.createIcons();</script>
 </body>
 </html>

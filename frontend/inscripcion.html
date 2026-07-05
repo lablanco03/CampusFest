@@ -1,1 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Inscripciones - CampusFest 2026</title>
 
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/inscripcion.css">
+
+	<!-- LLAMAR ICONS -->
+	<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+	<!-- HEADER -->
+	<header class="header_principal">
+		<div class="contenedor_header">
+			<a href="index.html">
+				<img src="img/logo.jpg" class="logo" alt="CampusFest">
+			</a>
+			<nav class="menu_header">
+				<a href="actividades.html">Actividades</a>
+				<a href="agenda.html">Agenda</a>
+				<a href="stands.html">Stands</a>
+				<a href="contacto.html">Contacto</a>
+				<a href="login_admin.html" id="admin_header">Panel Administrador</a>
+			</nav>
+		</div>
+	</header>
+
+	<!-- TÍTULO DE LA PÁGINA -->
+	<section class="titulo_pagina">
+		<div class="contenedor">
+			<a href="detalle_actividad.html" class="enlace_volver">
+				<i data-lucide="arrow-left"></i>
+				Volver
+			</a>
+			<h1>Formulario de Inscripción</h1>
+			<p>¡Puedes usar este formulario inscribirte a las actividades que desees!</p>
+		</div>
+	</section>
+
+	<!-- FORMULARIO DE INSCRIPCIÓN -->
+	<section class="seccion_formulario">
+		<div class="contenedor_formulario">
+			<form id="formularioInscripcion" class="formulario_inscripcion">
+
+				<!-- Aviso de campos obligatorios -->
+				<div class="mensaje_info">
+					<i data-lucide="info"></i>
+					Los campos marcados con <span>*</span> son obligatorios
+				</div>
+
+				<div class="grupo_formulario">
+					<label for="txtNombreCompleto">
+						Nombre completo <span>*</span>
+					</label>
+					<input type="text" id="txtNombreCompleto" placeholder="Ej: Juan David García López">
+				</div>
+
+				<div class="grupo_formulario">
+					<label for="txtIdentificacion">
+						Identificación <span>*</span>
+					</label>
+					<input type="text" id="txtIdentificacion" placeholder="Ej: 1-2345-6789">
+				</div>
+
+				<div class="grupo_formulario">
+					<label for="txtCorreoElectronico">
+						Correo electrónico <span>*</span>
+					</label>
+					<input type="email" id="txtCorreoElectronico" placeholder="Ej: correo@universidad.cr">
+				</div>
+
+				<div class="grupo_formulario">
+					<label for="txtTelefono">
+						Teléfono <span>*</span>
+					</label>
+					<input type="text" id="txtTelefono" placeholder="Ej: 8888-8888">
+				</div>
+
+				<div class="grupo_formulario">
+					<label for="txtCarreraGrupo">
+						Carrera o grupo <span>*</span>
+					</label>
+					<input type="text" id="txtCarreraGrupo" placeholder="Ej: Ingeniería Informática - Grupo 01">
+				</div>
+                <div class="grupo_formulario">
+                    <label for="ddlActividad">
+                        Actividad <span>*</span>
+                    </label>
+                    <select id="ddlActividad">
+                        <option value="">Seleccione una actividad</option>
+                        <option>Hackathon Universitario</option>
+                        <option>Torneo de Fútbol Interfacultades</option>
+                        <option>Exposición de Arte Contemporáneo</option>
+                        <option>Festival Gastronómico</option>
+                        <option>Concierto de Bandas Universitarias</option>
+                        <option>Taller de Robótica e IA</option>
+                    </select>
+                </div>
+				<div class="grupo_formulario">
+					<label for="txtaComentarios">
+						Comentarios
+					</label>
+					<textarea id="txtaComentarios" rows="3" placeholder="Escribe aquí cualquier observación..."></textarea>
+				</div>
+
+				<button type="submit" id="btnEnviar" class="btn_formulario">
+					Inscribirme
+					<i data-lucide="arrow-right"></i>
+				</button>
+
+				<p id="mensajeFormulario" class="mensaje_formulario"></p>
+
+			</form>
+		</div>
+	</section>
+
+	<!-- FOOTER -->
+	<footer class="footer">
+		<div class="contenedor_footer">
+			<!-- Logo -->
+			<div class="footer_columna">
+				<img src="img/logo.jpg" alt="CampusFest" class="footer_logo">
+				<p>
+					El festival universitario anual que celebra la diversidad cultural, artística,
+					deportiva, tecnológica y gastronomía de nuestra comunidad.
+				</p>
+			</div>
+
+			<!-- Navegación -->
+			<div class="footer_columna">
+				<h3>Navegación</h3>
+				<a href="index.html">Inicio</a>
+				<a href="actividades.html">Actividades</a>
+				<a href="agenda.html">Agenda</a>
+				<a href="stands.html">Stands</a>
+				<a href="contacto.html">Contacto</a>
+			</div>
+
+			<!-- Contacto -->
+			<div class="footer_columna">
+				<h3>Contacto</h3>
+				<p>
+					<i data-lucide="map-pin"></i>
+					Campus Principal
+				</p>
+				<p>
+					<i data-lucide="phone"></i>
+					+506 8888-8888
+				</p>
+				<p>
+					<i data-lucide="mail"></i>
+					campusfest@universidad.cr
+				</p>
+			</div>
+		</div>
+
+		<div class="footer_copy">
+			<p>© 2026 CampusFest | Todos los derechos reservados.</p>
+		</div>
+	</footer>
+
+	<!-- ACTIVAR ICONS -->
+	<script>lucide.createIcons();</script>
+
+	<!-- SCRIPTS DE VALIDACIÓN E INSCRIPCIÓN -->
+	<script src="js/validaciones.js"></script>
+	<script src="js/inscripciones.js"></script>
+</body>
+</html>

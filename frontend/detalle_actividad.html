@@ -1,146 +1,186 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle de Actividad - CampusFest 2026</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Detalle de Actividad - CampusFest 2026</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/estilos.css">
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/detalle_actividad.css">
 
-    <!-- LLAMAR ICONS -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-
+	<!-- LLAMAR ICONS -->
+	<script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header class="header_principal">
-        <div class="contenedor">
+	<!-- HEADER -->
+	<header class="header_principal">
+		<div class="contenedor_header">
+			<a href="index.html">
+				<img src="img/logo.jpg" class="logo" alt="CampusFest">
+			</a>
+			<nav class="menu_header">
+				<a href="actividades.html" class="activo">Actividades</a>
+				<a href="agenda.html">Agenda</a>
+				<a href="stands.html">Stands</a>
+				<a href="contacto.html">Contacto</a>
+				<a href="login_admin.html" id="admin_header">Panel Administrador</a>
+			</nav>
+		</div>
+	</header>
 
-            <a href="index.html">
-                <img src="img/logo.png" class="logo" alt="CampusFest">
-            </a>
+	<!-- BANNER CON IMAGEN DE LA ACTIVIDAD -->
+	<section class="banner_detalle">
+		<img src="img/actividades/hackathon.jpg" alt="Hackathon Universitario">
+		<div class="banner_overlay">
+			<div class="contenedor">
+				<a href="actividades.html" class="enlace_volver">
+					<i data-lucide="arrow-left"></i>
+					Volver
+				</a>
+				<span class="card_badge_categoria tecnologico">Tecnológico</span>
+				<h1>Hackathon Universitario</h1>
+			</div>
+		</div>
+	</section>
 
-            <nav class="menu_header">
-                <a href="actividades.html" class="activo">Actividades</a>
-                <a href="agenda.html">Agenda</a>
-                <a href="stands.html">Stands</a>
-                <a href="contacto.html">Contacto</a>
-                <a href="panel_admin.html" id="admin_header">Panel Admin</a>
-            </nav>
+	<!-- CUERPO: INFO GENERAL + PANEL DE INSCRIPCIÓN -->
+	<main>
+		<div class="cuerpo_detalle">
 
-        </div>
-    </header>
+			<!-- COLUMNA IZQUIERDA: INFORMACIÓN -->
+			<div class="columna_principal">
 
-    <!-- BANNER CON IMAGEN DE LA ACTIVIDAD -->
-    <section class="banner_detalle">
-        <img src="img/actividades/hackathon.jpg" alt="Hackathon Universitario">
-        <div class="banner_overlay">
-            <div class="contenedor">
-                <a href="actividades.html" class="enlace_volver">
-                    <i data-lucide="arrow-left" width="16" height="16"></i>
-                    Volver
-                </a>
-                <span class="card_badge_categoria tecnologico">Tecnológico</span>
-                <h1>Hackathon Universitario</h1>
-            </div>
-        </div>
-    </section>
+				<div class="bloque_info">
+					<h2>Información general</h2>
+					<div class="grid_info_general">
+						<div class="dato_info">
+							<i data-lucide="calendar"></i>
+							<div>
+								<span class="etiqueta_dato">Fecha</span>
+								<span class="valor_dato">Sáb 14 jun 2026</span>
+							</div>
+						</div>
+						<div class="dato_info">
+							<i data-lucide="clock"></i>
+							<div>
+								<span class="etiqueta_dato">Horario</span>
+								<span class="valor_dato">08:00 - 20:00</span>
+							</div>
+						</div>
+						<div class="dato_info">
+							<i data-lucide="map-pin"></i>
+							<div>
+								<span class="etiqueta_dato">Lugar</span>
+								<span class="valor_dato">Auditorio Principal</span>
+							</div>
+						</div>
+						<div class="dato_info">
+							<i data-lucide="users"></i>
+							<div>
+								<span class="etiqueta_dato">Cupo máximo</span>
+								<span class="valor_dato">120 personas</span>
+							</div>
+						</div>
+					</div>
+				</div>
 
-    <!-- CUERPO: INFO GENERAL + PANEL DE INSCRIPCION -->
-    <main>
-        <div class="cuerpo_detalle">
+				<div class="bloque_info">
+					<h2>Descripción</h2>
+					<p class="texto_descripcion">
+						Compite en equipos de 3 a 5 personas para desarrollar soluciones
+						innovadoras a retos reales del campus. 12 horas continuas de
+						código, creatividad, diseño y colaboración. Habrá mentores
+						expertos disponibles durante todo el evento, premios en efectivo
+						para los tres mejores proyectos y certificados de participación
+						para todos los equipos inscritos.
+					</p>
+				</div>
 
-            <!-- COLUMNA IZQUIERDA: INFORMACION -->
-            <div class="columna_principal">
+				<div class="bloque_info">
+					<h2>Requisitos de participación</h2>
+					<p class="texto_descripcion">
+						Laptop propia, conocimientos básicos de programación y equipo
+						conformado de 3 a 5 personas. Registro previo obligatorio antes
+						del 10 de junio. Cada integrante del equipo debe completar el
+						formulario de inscripción de forma individual.
+					</p>
+				</div>
 
-                <div class="bloque_info">
-                    <h2>Información general</h2>
-                    <div class="grid_info_general">
-                        <div class="dato_info">
-                            <i data-lucide="calendar" width="18" height="18"></i>
-                            <div>
-                                <span class="etiqueta_dato">Fecha</span>
-                                <span class="valor_dato">Sáb 14 jun 2026</span>
-                            </div>
-                        </div>
-                        <div class="dato_info">
-                            <i data-lucide="clock" width="18" height="18"></i>
-                            <div>
-                                <span class="etiqueta_dato">Horario</span>
-                                <span class="valor_dato">08:00 - 20:00</span>
-                            </div>
-                        </div>
-                        <div class="dato_info">
-                            <i data-lucide="map-pin" width="18" height="18"></i>
-                            <div>
-                                <span class="etiqueta_dato">Lugar</span>
-                                <span class="valor_dato">Auditorio Principal</span>
-                            </div>
-                        </div>
-                        <div class="dato_info">
-                            <i data-lucide="users" width="18" height="18"></i>
-                            <div>
-                                <span class="etiqueta_dato">Cupo máximo</span>
-                                <span class="valor_dato">120 personas</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+			</div>
 
-                <div class="bloque_info">
-                    <h2>Descripción</h2>
-                    <p class="texto_descripcion">
-                        Compite en equipos de 3 a 5 personas para desarrollar soluciones
-                        innovadoras a retos reales del campus. 12 horas continuas de
-                        código, creatividad, diseño y colaboración. Habrá mentores
-                        expertos disponibles durante todo el evento, premios en efectivo
-                        para los tres mejores proyectos y certificados de participación
-                        para todos los equipos inscritos.
-                    </p>
-                </div>
+			<!-- COLUMNA DERECHA: ESTADO DE CUPO E INSCRIPCIÓN -->
+			<aside class="panel_lateral">
+				<h2>Estado del cupo</h2>
 
-                <div class="bloque_info">
-                    <h2>Requisitos de participación</h2>
-                    <p class="texto_descripcion">
-                        Laptop propia, conocimientos básicos de programación y equipo
-                        conformado de 3 a 5 personas. Registro previo obligatorio antes
-                        del 10 de junio. Cada integrante del equipo debe completar el
-                        formulario de inscripción de forma individual.
-                    </p>
-                </div>
+				<div class="fila_inscritos">
+					<span>Inscritos</span>
+					<strong>98/120</strong>
+				</div>
 
-            </div>
+				<div class="card_barra_cupo">
+					<div class="card_barra_cupo_relleno" style="width:82%; background-color: var(--color-support1);"></div>
+				</div>
 
-            <!-- COLUMNA DERECHA: ESTADO DE CUPO E INSCRIPCION -->
-            <aside class="panel_lateral">
-                <h2>Estado del cupo</h2>
+				<p class="cupos_disponibles_texto">
+					<i data-lucide="check-circle-2"></i>
+					22 cupos disponibles
+				</p>
 
-                <div class="fila_inscritos">
-                    <span>Inscritos</span>
-                    <strong>98/120</strong>
-                </div>
+				<a href="inscripcion.html" class="btn_inscribirme">Inscribirme →</a>
 
-                <div class="card_barra_cupo">
-                    <div class="card_barra_cupo_relleno" style="width:82%; background-color: var(--color-support1);"></div>
-                </div>
+				<p class="nota_confirmacion">Recibirás confirmación por correo electrónico</p>
+			</aside>
 
-                <p class="cupos_disponibles_texto">
-                    <i data-lucide="check-circle-2" width="15" height="15"></i>
-                    22 cupos disponibles
-                </p>
+		</div>
+	</main>
 
-                <a href="inscripcion.html" class="btn_inscribirme">Inscribirme →</a>
+	<!-- FOOTER -->
+	<footer class="footer">
+		<div class="contenedor_footer">
+			<!-- Logo -->
+			<div class="footer_columna">
+				<img src="img/logo.jpg" alt="CampusFest" class="footer_logo">
+				<p>
+					El festival universitario anual que celebra la diversidad cultural, artística,
+					deportiva, tecnológica y gastronomía de nuestra comunidad.
+				</p>
+			</div>
 
-                <p class="nota_confirmacion">Recibirás confirmación por correo electrónico</p>
-            </aside>
+			<!-- Navegación -->
+			<div class="footer_columna">
+				<h3>Navegación</h3>
+				<a href="index.html">Inicio</a>
+				<a href="actividades.html">Actividades</a>
+				<a href="agenda.html">Agenda</a>
+				<a href="stands.html">Stands</a>
+				<a href="contacto.html">Contacto</a>
+			</div>
 
-        </div>
-    </main>
+			<!-- Contacto -->
+			<div class="footer_columna">
+				<h3>Contacto</h3>
+				<p>
+					<i data-lucide="map-pin"></i>
+					Campus Principal
+				</p>
+				<p>
+					<i data-lucide="phone"></i>
+					+506 8888-8888
+				</p>
+				<p>
+					<i data-lucide="mail"></i>
+					campusfest@universidad.cr
+				</p>
+			</div>
+		</div>
 
-    <!-- ACTIVAR ICONS -->
-    <script>lucide.createIcons();</script>
+		<div class="footer_copy">
+			<p>© 2026 CampusFest | Todos los derechos reservados.</p>
+		</div>
+	</footer>
 
+	<!-- ACTIVAR ICONS -->
+	<script>lucide.createIcons();</script>
 </body>
 </html>

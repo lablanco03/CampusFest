@@ -1,42 +1,137 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agenda 2026 - Festival Estudiantil</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CampusFest 2026 - Festival Estudiantil</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/estilos.css">
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/agenda.css">
 
-    <!-- LLAMAR ICONS -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-
+	<!-- LLAMAR ICONS -->
+	<script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header class="header_principal">
-        <div class="contenedor">
+	<!-- HEADER -->
+	<header class="header_principal">
+		<div class="contenedor_header">
+			<a href="index.html">
+				<img src="img/logo.jpg" class="logo" alt="CampusFest">
+			</a>
+			<nav class="menu_header">
+				<a href="actividades.html">Actividades</a>
+				<a href="agenda.html" class="activo">Agenda</a>
+				<a href="stands.html">Stands</a>
+				<a href="contacto.html">Contacto</a>
+				<a href="login_admin.html" id="admin_header">Panel Administrador</a>
+			</nav>
+		</div>
+	</header>
 
-            <a href="index.html">
-                <img src="img/logo.png" class="logo" alt="CampusFest">
-            </a>
+    <!-- HERO DE LA PAGINA -->
+<section class="hero_agenda">
+    <div class="contenedor_agenda_hero">
+        <h1>Agenda del Festival</h1>
+        <p>Cronograma completo de actividades por día</p>
+    </div>
+</section>
 
-            <nav class="menu_header">
-                <a href="actividades.html">Actividades</a>
-                <a href="agenda.html" class="activo">Agenda</a>
-                <a href="stands.html">Stands</a>
-                <a href="contacto.html">Contacto</a>
-                <a href="panel_admin.html" id="admin_header">Panel Admin</a>
-            </nav>
+<!-- CONTENIDO PRINCIPAL -->
+<main class="agenda_principal">
 
+    <!-- BOTONES DE DIAS -->
+    <div class="agenda_tabs">
+
+        <button id="btnSabado" class="agenda_tab activo">
+            <i data-lucide="calendar"></i>
+            Sáb 14 Jun
+        </button>
+
+        <button id="btnDomingo" class="agenda_tab">
+            <i data-lucide="calendar"></i>
+            Dom 15 Jun
+        </button>
+
+    </div>
+
+    <!-- TABLA -->
+    <section class="tabla_agenda">
+
+        <div class="tabla_header">
+            <div>Hora</div>
+            <div>Actividad</div>
+            <div>Lugar</div>
+            <div>Categoría</div>
+            <div>Estado</div>
         </div>
-    </header>
-    
 
+        <div id="cuerpoAgenda"></div>
 
-    <!-- ACTIVAR ICONS -->
-    <script>lucide.createIcons();</script>
+    </section>
+
+    <!-- LEYENDA -->
+    <div class="leyenda_agenda">
+
+        <span>Disponible</span>
+        <span>Lleno</span>
+        <span>Cancelado</span>
+
+    </div>
+
+</main>
+
+	<!-- FOOTER -->
+	<footer class="footer">
+		<div class="contenedor_footer">
+			<!-- Logo -->
+			<div class="footer_columna">
+				<img src="img/logo.jpg" alt="CampusFest" class="footer_logo">
+				<p>
+					El festival universitario anual que celebra la diversidad cultural, artística,
+					deportiva, tecnológica y gastronomía de nuestra comunidad.
+				</p>
+			</div>
+
+			<!-- Navegación -->
+			<div class="footer_columna">
+				<h3>Navegación</h3>
+				<a href="index.html">Inicio</a>
+				<a href="actividades.html">Actividades</a>
+				<a href="agenda.html">Agenda</a>
+				<a href="stands.html">Stands</a>
+				<a href="contacto.html">Contacto</a>
+			</div>
+
+			<!-- Contacto -->
+			<div class="footer_columna">
+				<h3>Contacto</h3>
+				<p>
+					<i data-lucide="map-pin"></i>
+					Campus Principal
+				</p>
+				<p>
+					<i data-lucide="phone"></i>
+					+506 8888-8888
+				</p>
+				<p>
+					<i data-lucide="mail"></i>
+					campusfest@universidad.cr
+				</p>
+			</div>
+		</div>
+
+		<div class="footer_copy">
+			<p>© 2026 CampusFest | Todos los derechos reservados.</p>
+		</div>
+	</footer>
+
+	<!-- ACTIVAR ICONS -->
+	<script src="js/agenda.js"></script>
+
+<script>
+    lucide.createIcons();
+</script>
 
 </body>
 </html>
