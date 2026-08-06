@@ -1,177 +1,122 @@
-const actividadesAgenda = {
-    sabado: [
-        {
-            hora: "08:00",
-            fin: "20:00",
-            actividad: "Hackathon Universitario",
-            lugar: "Auditorio Principal",
-            categoria: "Tecnológico",
-            estado: "Disponible"
-        },
-        {
-            hora: "10:00",
-            fin: "17:00",
-            actividad: "Exposición de Arte Contemporáneo",
-            lugar: "Galería Central",
-            categoria: "Artístico",
-            estado: "Disponible"
-        },
-        {
-            hora: "14:00",
-            fin: "17:00",
-            actividad: "Taller de Robótica e IA",
-            lugar: "Laboratorio Ingeniería B3",
-            categoria: "Tecnológico",
-            estado: "Disponible"
-        },
-        {
-            hora: "15:00",
-            fin: "16:30",
-            actividad: "Show de Danza Folklórica",
-            lugar: "Tarima Principal",
-            categoria: "Cultural",
-            estado: "Disponible"
-        }
-    ],
-
-    domingo: [
-        {
-            hora: "09:00",
-            fin: "18:00",
-            actividad: "Torneo de Fútbol Interfacultades",
-            lugar: "Canchas Deportivas Norte",
-            categoria: "Deportivo",
-            estado: "Lleno"
-        },
-        {
-            hora: "11:00",
-            fin: "12:30",
-            actividad: "Festival Gastronómico",
-            lugar: "Zona Verde",
-            categoria: "Gastronómico",
-            estado: "Disponible"
-        },
-        {
-            hora: "16:00",
-            fin: "18:00",
-            actividad: "Torneo de Videojuegos",
-            lugar: "Sala Multimedia",
-            categoria: "Recreativo",
-            estado: "Cancelado"
-        },
-        {
-            hora: "19:00",
-            fin: "23:00",
-            actividad: "Concierto de Bandas Universitarias",
-            lugar: "Auditorio Principal",
-            categoria: "Cultural",
-            estado: "Disponible"
-        }
-    ]
-};
-
 const cuerpoAgenda = document.getElementById("cuerpoAgenda");
-
 const btnSabado = document.getElementById("btnSabado");
 const btnDomingo = document.getElementById("btnDomingo");
 
+let actividadesAgenda = [];
+
+const mapaFechaDia = {
+    sabado: "2026-06-14",
+    domingo: "2026-06-15"
+};
+
 function obtenerClaseCategoria(categoria) {
-
-    switch(categoria){
-
+    switch (categoria) {
         case "Tecnológico":
             return "tecnologico";
-
         case "Artístico":
             return "artistico";
-
         case "Deportivo":
             return "deportivo";
-
         case "Cultural":
             return "cultural";
-
         case "Gastronómico":
             return "gastronomico";
-
         case "Recreativo":
-            return "recreativo";    
-
+            return "recreativo";
         default:
             return "tecnologico";
     }
 }
 
-function obtenerClaseEstado(estado){
+function calcularEstado(actividad) {
+    if (actividad.estado === "Cancelada") {
+        return "Cancelado";
+    }
+    if (actividad.cuposOcupados >= actividad.cupoMaximo) {
+        return "Lleno";
+    }
+    return "Disponible";
+}
 
-    switch(estado){
-
+function obtenerClaseEstado(estado) {
+    switch (estado) {
         case "Disponible":
             return "disponible";
-
         case "Lleno":
             return "lleno";
-
         default:
             return "cancelado";
     }
 }
 
-function cargarAgenda(dia){
-
+function cargarAgenda(dia) {
     cuerpoAgenda.innerHTML = "";
 
-    actividadesAgenda[dia].forEach(function(actividad){
+    const fechaDia = mapaFechaDia[dia];
+    const actividadesDelDia = actividadesAgenda.filter(function (actividad) {
+        const fechaActividad = new Date(actividad.fecha).toISOString().slice(0, 10);
+        return fechaActividad === fechaDia;
+    });
+
+    if (actividadesDelDia.length === 0) {
+        cuerpoAgenda.innerHTML = "<p>No hay actividades programadas para este día.</p>";
+        return;
+    }
+
+    actividadesDelDia.forEach(function (actividad) {
+        const estadoTexto = calcularEstado(actividad);
 
         cuerpoAgenda.innerHTML += `
             <div class="fila_agenda">
-
                 <div class="agenda_hora">
-                    <strong>${actividad.hora}</strong>
-                    <span>hasta ${actividad.fin}</span>
+                    <strong>${actividad.horaInicio}</strong>
+                    <span>hasta ${actividad.horaFin}</span>
                 </div>
-
                 <div>
-                    ${actividad.actividad}
+                    ${actividad.nombre}
                 </div>
-
                 <div class="agenda_lugar">
                     <i data-lucide="map-pin"></i>
                     ${actividad.lugar}
                 </div>
-
                 <div>
                     <span class="card_badge_categoria ${obtenerClaseCategoria(actividad.categoria)}">
                         ${actividad.categoria}
                     </span>
                 </div>
-
                 <div>
-                    <span class="card_badge_estado ${obtenerClaseEstado(actividad.estado)}">
-                        ${actividad.estado}
+                    <span class="card_badge_estado ${obtenerClaseEstado(estadoTexto)}">
+                        ${estadoTexto}
                     </span>
                 </div>
-
             </div>
         `;
     });
+
     lucide.createIcons();
 }
 
-btnSabado.addEventListener("click", function(){
+async function inicializarAgenda() {
+    try {
+        const respuesta = await fetch("/api/agenda");
+        actividadesAgenda = await respuesta.json();
+        cargarAgenda("sabado");
+    } catch (error) {
+        console.error("Error al cargar la agenda:", error.message);
+        cuerpoAgenda.innerHTML = "<p>No fue posible cargar la agenda.</p>";
+    }
+}
 
+btnSabado.addEventListener("click", function () {
     btnSabado.classList.add("activo");
     btnDomingo.classList.remove("activo");
-
     cargarAgenda("sabado");
 });
 
-btnDomingo.addEventListener("click", function(){
-
+btnDomingo.addEventListener("click", function () {
     btnDomingo.classList.add("activo");
     btnSabado.classList.remove("activo");
-
     cargarAgenda("domingo");
 });
 
-cargarAgenda("sabado");
+inicializarAgenda();
