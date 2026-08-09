@@ -5,6 +5,9 @@ import MongoStore from "connect-mongo";
 import path from "path";
 import { fileURLToPath } from "url";
 
+import authRoutes from "./routes/auth.routes.js";
+import adminRoutes from "./routes/admin.routes.js";
+
 import config from "./config/env.js";
 
 const app = express();
@@ -46,6 +49,10 @@ app.use(
         }
     })
 );
+
+app.use("/api/admin", authRoutes);
+
+app.use("/api/admin", adminRoutes);
 
 /* Ruta de prueba */
 
