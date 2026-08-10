@@ -38,7 +38,8 @@ function formatearFecha(fechaISO) {
     return new Date(fechaISO).toLocaleDateString('es-CR', {
         day: 'numeric',
         month: 'short',
-        year: 'numeric'
+        year: 'numeric',
+        timeZone: 'UTC'
     });
 }
 
