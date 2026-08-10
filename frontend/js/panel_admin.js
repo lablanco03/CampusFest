@@ -68,7 +68,7 @@ async function cargarActividades() {
             <td>${actividad.cuposOcupados}/${actividad.cupoMaximo}${canceladaTexto}</td>
             <td class="acciones">
                 <span class="icono_accion btn-editar-actividad" data-id="${actividad._id}"><i data-lucide="edit"></i></span>
-                <span class="icono_accion btn-toggle-actividad" data-id="${actividad._id}"><i data-lucide="x"></i></span>
+                <span class="icono_accion btn-toggle-actividad" data-id="${actividad._id}"><i data-lucide="rotate-ccw"></i></span>
             </td>
         `;
         cuerpoTabla.appendChild(fila);
@@ -145,7 +145,7 @@ async function cargarStands() {
             <td>${stand.ubicacion}${canceladoTexto}</td>
             <td class="acciones">
                 <span class="icono_accion btn-editar-stand" data-id="${stand._id}"><i data-lucide="edit"></i></span>
-                <span class="icono_accion btn-toggle-stand" data-id="${stand._id}"><i data-lucide="x"></i></span>
+                <span class="icono_accion btn-toggle-stand" data-id="${stand._id}"><i data-lucide="rotate-ccw"></i></span>
             </td>
         `;
         cuerpoTabla.appendChild(fila);

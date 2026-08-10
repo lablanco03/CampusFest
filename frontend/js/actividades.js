@@ -47,13 +47,21 @@ function crearTarjetaActividad(actividad) {
                 <i data-lucide="map-pin"></i>
                 ${actividad.lugar}
             </p>
+            <p class="card_meta">
+                <i data-lucide="users"></i>
+                Cupo máximo: ${actividad.cupoMaximo}
+            </p>
+            <p class="card_seccion_titulo">Descripción</p>
+            <p class="card_texto">${actividad.descripcion}</p>
+            <p class="card_seccion_titulo">Requisitos</p>
+            <p class="card_texto">${actividad.requisitos}</p>
             <div class="card_barra_cupo">
                 <div class="card_barra_cupo_relleno" style="width:${porcentaje}%; background-color: var(--color-support1);"></div>
             </div>
             <p class="card_texto_cupo">${actividad.cuposOcupados}/${actividad.cupoMaximo} cupos</p>
             ${lleno
                 ? '<span class="card_btn_deshabilitado">Sin cupos</span>'
-                : `<a href="detalle_actividad.html?id=${actividad._id}" class="card_btn_detalle">Ver detalle →</a>`
+                : `<a href="inscripcion.html?id=${actividad._id}" class="card_btn_detalle">Inscribirme</a>`
             }
         </div>
     `;

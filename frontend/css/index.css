@@ -360,8 +360,8 @@ i[data-lucide] {
 .card_btn_detalle {
     display: block;
     text-align: center;
-    background-color: var(--color-primary);
-    color: var(--color-support3);
+    background-color: var(--color-secondary);
+    color: var(--color-dark);
     text-decoration: none;
     font-weight: 700;
     padding: 10px;
@@ -371,6 +371,7 @@ i[data-lucide] {
 
 .card_btn_detalle:hover {
     background-color: var(--color-dark);
+    color: var(--color-support3);
 }
 
 .card_btn_deshabilitado {

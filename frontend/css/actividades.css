@@ -310,11 +310,26 @@ i[data-lucide] {
 	margin-bottom: 14px;
 }
 
+.card_seccion_titulo {
+	font-family: var(--font-primary);
+	font-size: 0.8rem;
+	font-weight: 700;
+	color: var(--color-dark);
+	margin: 10px 0 2px;
+}
+
+.card_texto {
+	font-size: 0.85rem;
+	color: #5b6b73;
+	margin: 0 0 4px;
+	line-height: 1.4;
+}
+
 .card_btn_detalle {
 	display: block;
 	text-align: center;
-	background-color: var(--color-primary);
-	color: var(--color-support3);
+	background-color: var(--color-secondary);
+	color: var(--color-dark);
 	text-decoration: none;
 	font-weight: 700;
 	padding: 10px;
@@ -324,6 +339,7 @@ i[data-lucide] {
 
 .card_btn_detalle:hover {
 	background-color: var(--color-dark);
+	color: var(--color-support3);
 }
 
 .card_btn_deshabilitado {
