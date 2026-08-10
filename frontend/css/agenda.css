@@ -453,35 +453,3 @@ i[data-lucide] {
     color: var(--color-support3);
 }
 
-/* MEDIA QUERIES */
-
-@media (max-width: 768px) {
-	/* Tabs apilados */
-	.agenda_tabs {
-		flex-wrap: wrap;
-		gap: 10px;
-	}
-	.agenda_tab {
-		font-size: 0.9rem;
-		padding: 10px 16px;
-	}
-
-	/* Tabla con scroll horizontal */
-	.tabla_agenda {
-		display: block;
-		overflow-x: auto;
-	}
-	.tabla_header,
-	.fila_agenda {
-		min-width: 650px; /* ancho mínimo para scroll */
-	}
-}
-
-@media (max-width: 480px) {
-	.hero_agenda h1 {
-		font-size: 2rem;
-	}
-	.contenedor_agenda_hero {
-		width: 90%;
-	}
-}

@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const tipo = txtContrasena.getAttribute('type') === 'password' ? 'text' : 'password';
         txtContrasena.setAttribute('type', tipo);
 
-        // Alternar visibilidad de los iconos
         if (tipo === 'text') {
             iconoOjoCerrado.style.display = 'none';
             iconoOjoAbierto.style.display = 'inline';
@@ -21,8 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Validación al enviar
-    formulario.addEventListener('submit', (e) => {
+    // Envío real al backend
+    formulario.addEventListener('submit', async (e) => {
         e.preventDefault();
 
         const correo = txtCorreo.value.trim();
@@ -37,10 +36,24 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        if (correo === 'admin@campusfest.edu.cr' && contrasena === 'admin123') {
+        try {
+            const respuesta = await fetch('/api/admin/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ correo, contrasena })
+            });
+
+            const datos = await respuesta.json();
+
+            if (!respuesta.ok) {
+                alert(datos.error || 'Credenciales inválidas.');
+                return;
+            }
+
             window.location.href = 'panel_admin.html';
-        } else {
-            alert('Credenciales inválidas. Use los datos de la caja Demo.');
+        } catch (error) {
+            console.error('Error de red al iniciar sesión:', error);
+            alert('Error de conexión con el servidor. Intenta de nuevo.');
         }
     });
 });

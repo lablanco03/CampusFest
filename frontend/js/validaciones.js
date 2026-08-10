@@ -4,7 +4,7 @@ function validarCorreo(correoElectronico){
 }
 
 function validarTelefono(telefono){
-    const expresionTelefono = /^[0-9]{8}$/;
+    const expresionTelefono = /^[0-9]{4}-[0-9]{4}$/;
     return expresionTelefono.test(telefono);
 }
 

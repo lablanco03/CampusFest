@@ -417,15 +417,19 @@ i[data-lucide] {
 	.cuerpo_detalle {
 		grid-template-columns: 1fr;
 	}
+
 	.panel_lateral {
 		position: static;
 	}
+
 	.grid_info_general {
 		grid-template-columns: 1fr;
 	}
+
 	.banner_detalle {
 		height: 240px;
 	}
+
 	.banner_overlay h1 {
 		font-size: 1.5rem;
 	}
